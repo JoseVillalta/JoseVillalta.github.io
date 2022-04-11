@@ -1,0 +1,39 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: "Yes Way Jose"
+author: "Jose Villalta"
+theme: "PaperMod"
+cover: "img/cover.jpeg"
+
+params:
+     homeInfoParams:
+        Title: "Hi folks! I'm Jose. Welcome to my page"
+        Content: >
+             I'm a father, husband and engineer living in Seattle. I write software for AWS.
+        cover:
+           Image: "img/cover.jpeg"
+             
+             
+             
+     socialIcons:
+           - name: twitter
+             url: "https://twitter.com/PhilosoGeekDad"
+           - name: linkedin
+             url: "https://www.linkedin.com/in/jvillalta/"
+           - name: github
+             url: "https://github.com/JoseVillalta"
+           - name: goodreads
+             url: "https://www.goodreads.com/user/show/5926316-jose"
+
+
+menu: 
+    main:
+        - name: CV
+          url: experience/
+          weight: 4
+        - name: About Me
+          url: about/
+          weight: 5
+        - name: "Old Blog"
+          url: "http://joseavillalta.blogspot.com/"
+          weight: 6
