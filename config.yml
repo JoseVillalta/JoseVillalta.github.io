@@ -1,8 +1,8 @@
-baseURL: http://example.org/
+baseURL: http://josevillalta.com
 languageCode: en-us
 title: "Yes Way Jose"
 author: "Jose Villalta"
-theme: "PaperMod"
+theme: "hugo-PaperMod"
 
 params:
      homeInfoParams:
