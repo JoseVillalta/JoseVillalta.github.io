@@ -3,16 +3,12 @@ languageCode: en-us
 title: "Yes Way Jose"
 author: "Jose Villalta"
 theme: "PaperMod"
-cover: "img/cover.jpeg"
 
 params:
      homeInfoParams:
         Title: "Hi folks! I'm Jose. Welcome to my page"
         Content: >
-             I'm a father, husband and engineer living in Seattle. I write software for AWS.
-        cover:
-           Image: "img/cover.jpeg"
-             
+             I'm a father, husband and engineer living in Seattle. I write software for AWS.     
              
              
      socialIcons:
