@@ -1,8 +1,8 @@
-baseURL: http://josevillalta.com
+baseURL: https://JoseVillalta.github.io
 languageCode: en-us
 title: "Yes Way Jose"
 author: "Jose Villalta"
-theme: "hugo-PaperMod"
+theme: "PaperMod"
 
 params:
      homeInfoParams:
