@@ -11,7 +11,7 @@ I want to be better at designing software and it has been shown in research that
 are those that do "delibarate practice" I am most definitely NOT the best software system designer out there, but talent is overated and I 
 intend to improve my knowledge one day at time. You are welcome to follow along. 
 
-I'm not the first person to come up with this concept. That would be [Adrien Coyler](https://twitter.com/adriancolyer) from [the morning paper](https://blog.acolyer.org/)]). Sadly, after 10 years going strong, Adrian stopped posting last year. 
+I'm not the first person to come up with this concept. That would be [Adrien Coyler](https://twitter.com/adriancolyer) from [the morning paper](https://blog.acolyer.org/)). Sadly, after 10 years going strong, Adrian stopped posting last year. 
 
 So without further ado, let me briefly mention the first paper: 
 
