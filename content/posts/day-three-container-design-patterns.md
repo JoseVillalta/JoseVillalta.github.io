@@ -1,7 +1,7 @@
 ---
 title: "A Paper per day: Container Design Patterns"
 date: 2022-07-19T07:23:34-07:00
-draft: true
+Author: Jose Villalta
 ---
 
 
