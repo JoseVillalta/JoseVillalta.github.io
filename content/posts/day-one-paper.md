@@ -1,7 +1,7 @@
 ---
 Author: "Jose Villalta"
 
-title: "Goal: A Paper Every Day. Day 1: Mesos Paper"
+title: "Goal: A Paper Every Day. Day One: Mesos Paper"
 date: 2022-07-17T13:04:01-07:00
 ---
 
