@@ -1,7 +1,6 @@
 ---
 title: "Paper every day. Day Four: Harvest, Yield, and Scalable Tolerant Systems"
 date: 2022-07-20T06:28:24-07:00
-draft: true
 Author: Jose Villalta
 ---
 
