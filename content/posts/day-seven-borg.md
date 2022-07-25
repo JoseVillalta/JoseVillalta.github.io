@@ -1,5 +1,5 @@
 ---
-title: "Paper Every Day. Day Seven: Large-scale cluster management at Google with Borg"
+title: "Paper every day. Day Seven: Large-scale cluster management at Google with Borg"
 date: 2022-07-23T18:56:09-07:00
 Author: Jose Villalta
 ---
