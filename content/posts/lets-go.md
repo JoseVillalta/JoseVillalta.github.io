@@ -1,7 +1,6 @@
 ---
 title: "Lets Go"
 date: 2022-07-24T21:42:07-07:00
-draft: true
 author: Jose Villalta
 ---
 
