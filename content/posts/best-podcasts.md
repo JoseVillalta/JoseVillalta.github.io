@@ -2,6 +2,9 @@
 title: "The top 3 podcasts for Software Developers"
 date: 2023-10-31T09:05:57-07:00
 draft: false
+cover: 
+   image: "img/spheres.jpg"
+   relative: false
 ---
 
 ### The Top 3 Podcasts for Software Developers
