@@ -18,7 +18,7 @@ This is the podcast to keep up-to-date with all things Go. The jokes are nerdy a
 #### Developer Tea by Jonathan Cutrell
 [link](https://developertea.com/)
 
-I just found out about this podcast about a month ago by searching for "best podcast for developers" I really like it! the author discusses the psychological aspect of coding. He gives useful advice about thinking through common situations. The backlog Psychology series is on point. I also enjoyed his post about [estimation](https://spec.fm/podcasts/developer-tea/610dfa84) and why we always get it wrong. 
+I just found out about this podcast about a month ago by searching for "best podcast for developers" I really like it! the author discusses the psychological aspect of coding. He gives useful advice about thinking through common situations. The backlog Psychology series is on point. I also enjoyed his post about [estimation](https://spec.fm/podcasts/developer-tea/610dfa84) and why we always get it wrong. [link to blog post](https://www.jonathancutrell.com/blog/2014-08-27-why-developers-underestimate-one-reason-that-will-change-the-way-you-see-projects-forever) 
 
 ### Co-recursive by Adam Gordon Bell
 [link](https://corecursive.com/about)
