@@ -1,7 +1,7 @@
 ---
 title: "Learning Go"
 date: 2024-08-27T08:32:11-07:00
-draft: true
+draft: false
 author: "Yes Way Jose"
 cover: 
   image: "img/Go-Gopher.jpg"
