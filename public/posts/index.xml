@@ -8,12 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 01 Mar 2025 16:13:55 -0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Useful Strategies for Growing</title>
+      <title>How do you architech change? The answer is simple, but not always easy</title>
       <link>http://localhost:1313/posts/useful-strategies-for-growing/</link>
       <pubDate>Sat, 01 Mar 2025 16:13:55 -0800</pubDate>
       
       <guid>http://localhost:1313/posts/useful-strategies-for-growing/</guid>
-      <description></description>
+      <description>&lt;p&gt;This week I had an Eureka moment at work. You see, there are many things I see at work that I would like to improve. Technical debt in our codebase. Inefficient processes. Communication silos across teams. The list of things one can improve never ends, this is true in all software shops. System complixity grows as new functionality gets added, inefficiencies optimized, bugs fixed. Secuirty hardened, etc.&lt;/p&gt;
+&lt;p&gt;How do you increase the quality of your system without interrupting the flow? Well, obviously, you break it up, one tiny thing at time. That&amp;rsquo;s how. Yeah it&amp;rsquo;s obvious but (this is embarrasing to admit) I get the urge to make BIG changes, I&amp;rsquo;d like to rewrite whole chuncks of the codebase, I&amp;rsquo;d like to build a brand new release pipeline, and we might do that someday, but not today. When you have a team that&amp;rsquo;s busy doing the work, tidying up gets deprioritized. After all, that bug in prod needs to get fixed yesterday, that new feature needs to ship on time. Oh, by the way, the developer that was working on that thing your system depends on quit last week.&lt;/p&gt;</description>
     </item>
     
     <item>
