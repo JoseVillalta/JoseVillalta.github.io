@@ -1,7 +1,7 @@
 ---
 title: "The Sirens Call: How Attention Became the World's Most Endangered Resource"
 date: 2025-03-05T08:49:27-08:00
-draft: true
+draft: false
 cover: 
    image: "img/TheSirensCall.jpeg"
    relative: false
