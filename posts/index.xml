@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Yes Way Jose</title><link>https://JoseVillalta.github.io/posts/</link><description>Recent content in Posts on Yes Way Jose</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 05 Mar 2025 08:49:27 -0800</lastBuildDate><atom:link href="https://JoseVillalta.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>The Sirens Call: How Attention Became the World's Most Endangered Resource</title><link>https://JoseVillalta.github.io/posts/the-sirens-call/</link><pubDate>Wed, 05 Mar 2025 08:49:27 -0800</pubDate><guid>https://JoseVillalta.github.io/posts/the-sirens-call/</guid><description>&lt;h3 id="book-review">Book Review&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Yes Way Jose</title><link>https://JoseVillalta.github.io/posts/</link><description>Recent content in Posts on Yes Way Jose</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 05 Mar 2025 09:21:38 -0800</lastBuildDate><atom:link href="https://JoseVillalta.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Practical Engineering</title><link>https://JoseVillalta.github.io/posts/practical-engineering/</link><pubDate>Wed, 05 Mar 2025 09:21:38 -0800</pubDate><guid>https://JoseVillalta.github.io/posts/practical-engineering/</guid><description>&lt;h2 id="practical-engineering-by-peng-zhang">Practical Engineering by Peng Zhang&lt;/h2>
+&lt;p>I want to give a quick shout out to Peng&amp;rsquo;s blog &lt;a href="peng.fyi">peng.fyi&lt;/a>
+Peng works with me writing software for AWS Fargate&amp;rsquo;s Dataplane. I have been following his posts the last few days and I really like this blog
+because:&lt;/p>
+&lt;ul>
+&lt;li>Technical topics that apply to most folks in my team&lt;/li>
+&lt;li>His posts are short and to the point.&lt;/li>
+&lt;li>He illustrates his points with code.&lt;/li>
+&lt;li>The code is formatted with beautifcul syntax highlits that makes it easy to read.&lt;/li>
+&lt;li>I get inspired myself to share my insights in writing.&lt;/li>
+&lt;/ul>
+&lt;p>Thanks Peng!&lt;/p></description></item><item><title>The Sirens Call: How Attention Became the World's Most Endangered Resource</title><link>https://JoseVillalta.github.io/posts/the-sirens-call/</link><pubDate>Wed, 05 Mar 2025 08:49:27 -0800</pubDate><guid>https://JoseVillalta.github.io/posts/the-sirens-call/</guid><description>&lt;h3 id="book-review">Book Review&lt;/h3>
 &lt;p>I&amp;rsquo;m almost finished with &lt;a href="https://www.amazon.com/Sirens-Call-Attention-Endangered-Resource-ebook/dp/B0DDNGLSJP">The Siren&amp;rsquo;s Call by Chris Hayes&lt;/a>
 and it&amp;rsquo;s interesting enough to call out here.&lt;/p>
 &lt;p>The book starts with an excellent explanation of what attention is and how it works. Then the book presents two analogies to use when thinking about attention.&lt;/p>
