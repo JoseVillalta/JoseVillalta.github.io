@@ -124,6 +124,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Learning File Systems
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Lately I have been learning about File Systems from the book “Operating Systems. Three Easy Pieces” by Remzi Arpaci-Dusseau.
+I used to think that I knew how file systems worked because the interface open, read and write is so straight forward, what else could there be to it? But then at work some weird issues come up where some weird behaviour happens, like, du says the disk has space but df says the disk is full, what could make that happen? Or when an issue mounting a volume occurs and you realize that you don’t know the difference between mounting a block device versus mounting a file system. Are they both the same thing? I need to have a mental model of what the system is doing in order to debug it. Knowing the data structures in the file system and having an idea of what happens when you open a file, how does the operating system find the file? how does it traverse the file tree? What is in memory versus disk? I must confess I am still in the dark when it comes to container images and union file systems. I understand how a container is made up of many layers over imposed on top of each other. An image is essentially a tar file of different file systems on top of each other. But, how is it implemented? how do you, can you just put a whole other /proc and other system files on top of a kernel? So anyway, that’s what I have been up to.
+...</p>
+  </section>
+  <footer class="entry-footer">&lt;span title=&#39;2023-07-15 21:21:31 -0700 PDT&#39;&gt;July 15, 2023&lt;/span&gt;</footer>
+  <a class="entry-link" aria-label="post link to Learning File Systems" href="http://localhost:1313/posts/learning-file-systems/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>My Tsundoku Pile
     </h2>
   </header>
@@ -255,21 +269,6 @@ Then it introduces two concepts harvest and yield which is interesting because i
   </section>
   <footer class="entry-footer">&lt;span title=&#39;2022-07-20 06:28:24 -0700 PDT&#39;&gt;July 20, 2022&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>
   <a class="entry-link" aria-label="post link to Paper every day. Day Four: Harvest, Yield, and Scalable Tolerant Systems" href="http://localhost:1313/posts/day-four-harvest-yield/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Paper every day. Day Three: Container Design Patterns
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Day three: Design patterns for container-based distributed systems Link to paper
-Containers provide the ability to package, deploy and reuse applications using a natural isolation boundary. Developers can expose application-specific functionality as interfaces as well as more generic hooks for many systems like metrics, health, etc.
-In this paper the authors present the readers with two types of container design patterns: Patterns for container in the same machine (Single node) and patterns where the containers are spread out in different machines (multi node)
-...</p>
-  </section>
-  <footer class="entry-footer">&lt;span title=&#39;2022-07-19 07:23:34 -0700 PDT&#39;&gt;July 19, 2022&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>
-  <a class="entry-link" aria-label="post link to Paper every day. Day Three: Container Design Patterns" href="http://localhost:1313/posts/day-three-container-design-patterns/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

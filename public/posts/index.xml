@@ -6,9 +6,29 @@
     <description>Recent content in Posts on Yes Way Jose</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Mar 2025 08:49:27 -0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Mar 2025 09:21:38 -0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The Sirens Call</title>
+      <title>Practical Engineering</title>
+      <link>http://localhost:1313/posts/practical-engineering/</link>
+      <pubDate>Wed, 05 Mar 2025 09:21:38 -0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/practical-engineering/</guid>
+      <description>&lt;h2 id=&#34;practical-engineering-by-peng-zhang&#34;&gt;Practical Engineering by Peng Zhang&lt;/h2&gt;
+&lt;p&gt;I want to give a quick shout out to Peng&amp;rsquo;s blog &lt;a href=&#34;peng.fyi&#34;&gt;peng.fyi&lt;/a&gt;
+Peng works with me writing software for AWS Fargate&amp;rsquo;s Dataplane. I have been following his posts the last few days and I really like this blog
+because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Technical topics that apply to most folks in my team&lt;/li&gt;
+&lt;li&gt;His posts are short and to the point.&lt;/li&gt;
+&lt;li&gt;He illustrates his points with code.&lt;/li&gt;
+&lt;li&gt;The code is formatted with beautifcul syntax highlits that makes it easy to read.&lt;/li&gt;
+&lt;li&gt;I get inspired myself to share my insights in writing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks Peng!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The Sirens Call: How Attention Became the World&#39;s Most Endangered Resource</title>
       <link>http://localhost:1313/posts/the-sirens-call/</link>
       <pubDate>Wed, 05 Mar 2025 08:49:27 -0800</pubDate>
       
