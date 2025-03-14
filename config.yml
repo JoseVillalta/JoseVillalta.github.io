@@ -30,6 +30,6 @@ menu:
         - name: About Me
           url: about/
           weight: 5
-        - name: "Old Blog"
+        - name: "Personal Blog"
           url: "http://joseavillalta.blogspot.com/"
           weight: 6
