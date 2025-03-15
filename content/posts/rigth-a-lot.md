@@ -9,7 +9,7 @@ I'm lucky that I get to work with people who are good at what they do.
 The corporate-speak term we use at Amazon is the Leadership Principle of "Right A Lot"
 
 For me it's about having a scientific mindset, or more plainly, constantly wondering, "how does this work?"
-"Why are things working this way, instead of that way?" or my favority "What would happen if I dod this"
+"Why are things working this way, instead of that way?" or my favority "What would happen if I do this"
 but wondering and inquiring is not the whole thing, is actively working to disconfirm your beliefs. 
 It's about being open to the possibility that you might be wrong. I love that. 
 
@@ -28,5 +28,10 @@ This one particular thing required more changes than I had anticipated, and well
 the Gamma environment. The thing is, I was so sure that my change was working...that I reached out to the whole team asking if they had a bug in their system. 
 But no, the bug was mine, I wrote it. It's a bad sign when making a change for feature A, breaks an unrelated feature B. This could be a sign of a brittle desing, 
 maybe I am not done refactoring this particular component. Oh well, that's why test. Still, this episode makes me want to do better next time. 
+
+To be fair, a bit of context explains what happened, the day before this happened I was similarly testing my new feature, and out of diligence I was going over all the
+use cases for this testing tool we developed, I was adding support for new features and I was testing the legacy ones when I found out that one of the existing features was not
+working. So I spent a lot of time thinking I broke it, hours later I realized a somewhat recent change had broken this feature and I was so annoyed. Then, the next day
+I was testing the whole thing end to end when something else came up, I assumed someone else had broken it. Anyway.
 
 -JV
