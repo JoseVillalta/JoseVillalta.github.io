@@ -1,7 +1,7 @@
 ---
 title: "KPI for Career Success"
 date: 2025-03-17T08:22:45-07:00
-draft: true
+draft: false
 ---
 
 ## What is the one metric for sucess in your career?
