@@ -6,7 +6,16 @@
     <description>Recent content on Yes Way Jose</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Mar 2025 08:22:45 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Oct 2025 17:12:00 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Deep Dive into Network Namespaces in AWS ECS Containers</title>
+      <link>http://localhost:1313/posts/network-namespaces-ecs-containers/</link>
+      <pubDate>Sun, 12 Oct 2025 17:12:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/network-namespaces-ecs-containers/</guid>
+      <description>Ever wondered what happens under the hood when you launch an ECS task with awsvpc networking? Let&amp;#39;s explore the fascinating world of network isolation in AWS ECS.</description>
+    </item>
+    
     <item>
       <title>KPI for Career Success</title>
       <link>http://localhost:1313/posts/kpi-for-career-success/</link>

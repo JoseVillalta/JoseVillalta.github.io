@@ -2,13 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/kpi-for-career-success/</loc>
-    <lastmod>2025-03-17T08:22:45-07:00</lastmod>
+    <loc>http://localhost:1313/posts/network-namespaces-ecs-containers/</loc>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/aws/</loc>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/containers/</loc>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ecs/</loc>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/linux/</loc>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/namespaces/</loc>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/networking/</loc>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-03-17T08:22:45-07:00</lastmod>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/technical/</loc>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-10-12T17:12:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/kpi-for-career-success/</loc>
     <lastmod>2025-03-17T08:22:45-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/rigth-a-lot/</loc>
@@ -85,12 +115,8 @@
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
     <loc>http://localhost:1313/posts/sample/</loc>
   </url><url>
     <loc>http://localhost:1313/experience/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

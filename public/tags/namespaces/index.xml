@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Namespaces on Yes Way Jose</title>
+    <link>http://localhost:1313/tags/namespaces/</link>
+    <description>Recent content in Namespaces on Yes Way Jose</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Oct 2025 17:12:00 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/namespaces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Deep Dive into Network Namespaces in AWS ECS Containers</title>
+      <link>http://localhost:1313/posts/network-namespaces-ecs-containers/</link>
+      <pubDate>Sun, 12 Oct 2025 17:12:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/network-namespaces-ecs-containers/</guid>
+      <description>Ever wondered what happens under the hood when you launch an ECS task with awsvpc networking? Let&amp;#39;s explore the fascinating world of network isolation in AWS ECS.</description>
+    </item>
+    
+  </channel>
+</rss>
