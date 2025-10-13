@@ -130,8 +130,8 @@
     </h2>
   </header>
   <section class="entry-content">
-    <p>How do multiple containers run on the same EC2 instance without stepping on each other’s network traffic? The answer lies in Linux network namespaces—a powerful isolation mechanism that gives each ECS task its own private network stack. Join me as we dissect a live ECS instance and uncover the elegant engineering that makes awsvpc networking possible.
-What are network namespaces for? A Linux namespace is a construct that creates an isolated copy of the networking stack, enabling them to run on the same host with different IP addresses, DNS configurations, and route tables. This allows multiple containers to run on the same machine without interfering with each other’s network traffic.
+    <p>What goes into a network namespace? What’s a CNI plugin? This blog post explores the contents of a network namespace and then provides links to the open source code that creates and configures namespaces for containarized workloads running on Fargate and ECS Managed Instances.
+What are network namespaces for? A Linux namespace is a construct that creates an isolated copy of the networking stack. Namespaces allows multiple ECS tasks to run on the same host with different IP addresses, DNS configurations, and route tables.
 ...</p>
   </section>
   <footer class="entry-footer">&lt;span title=&#39;2025-10-12 17:12:00 -0700 PDT&#39;&gt;October 12, 2025&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>

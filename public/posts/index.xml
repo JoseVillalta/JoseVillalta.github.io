@@ -13,7 +13,7 @@
       <pubDate>Sun, 12 Oct 2025 17:12:00 -0700</pubDate>
       
       <guid>http://localhost:1313/posts/network-namespaces-ecs-containers/</guid>
-      <description>Ever wondered what happens under the hood when you launch an ECS task with awsvpc networking? Let&amp;#39;s explore the fascinating world of network isolation in AWS ECS.</description>
+      <description>Ever wondered what happens under the hood when you launch an ECS task with awsvpc networking? Let&amp;#39;s explore how network namespaces are put together when you run containers in ECS Managed Instances.</description>
     </item>
     
     <item>

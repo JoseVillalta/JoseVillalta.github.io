@@ -5,14 +5,14 @@ draft: false
 tags: ["aws", "ecs", "containers", "networking", "linux", "namespaces"]
 categories: ["technical"]
 author: "Jose Villalta"
-description: "Ever wondered what happens under the hood when you launch an ECS task with awsvpc networking? Let's explore the fascinating world of network isolation in AWS ECS."
+description: "Ever wondered what happens under the hood when you launch an ECS task with awsvpc networking? Let's explore how network namespaces are put together when you run containers in ECS Managed Instances."
 ---
 
-How do multiple containers run on the same EC2 instance without stepping on each other's network traffic? The answer lies in Linux network namespaces—a powerful isolation mechanism that gives each ECS task its own private network stack. Join me as we dissect a live ECS instance and uncover the elegant engineering that makes awsvpc networking possible.
+What goes into a network namespace? What's a CNI plugin? This blog post explores the contents of a network namespace and then provides links to the open source code that creates and configures namespaces for containarized workloads running on Fargate and ECS Managed Instances. 
 
 ## What are network namespaces for?
 
-A Linux namespace is a construct that creates an isolated copy of the networking stack, enabling them to run on the same host with different IP addresses, DNS configurations, and route tables. This allows multiple containers to run on the same machine without interfering with each other's network traffic.
+A Linux namespace is a construct that creates an isolated copy of the networking stack. Namespaces allows multiple ECS tasks to run on the same host with different IP addresses, DNS configurations, and route tables. 
 
 ![Network Namespaces Overview](/img/v2-SingleBridge-Page-4.drawio.png)
 
@@ -302,11 +302,125 @@ For setting up awsvpc namespaces without any special networking features (such a
 
 **ENI and Branch-ENI**
 
-ECS MI and Fargate use two types of ENIs: x-ENIs (Regular ENIs in the code) and branch ENIs (ENIs that leverage trunking). They are in the ENI and branch-eni packages respectively. Under the hood the plugins call netlib to setup the links.
+ECS Managed Instances and Fargate use two types of ENIs: x-ENIs (Regular ENIs in the code) and branch ENIs (ENIs that leverage trunking). They are in the ENI and branch-eni packages respectively. Under the hood the plugins call netlib to setup the links.
 
-**Bridge and IPAM**
+The [ECS ENI plugin](https://github.com/aws/amazon-ecs-cni-plugins/tree/master/plugins/eni) configures a container's network namespace to use an Elastic Network Interface (ENI) directly. It moves an ENI from the host into the container's network namespace.
 
-In order to configure communication with the task metadata service (TMDS) we use IPAM to get an IP from the ECS subnet and Bridge to create a veth pair to bridge the namespaces.
+## Key Components
+
+### Engine Interface
+The core logic is in the `engine` package, which handles:
+- Retrieving ENI metadata from EC2 instance metadata service
+- Finding the network device by MAC address
+- Setting up the container namespace with the ENI
+
+### Main Flow
+
+1. **Plugin Entry**: The main function uses CNI's `skel.PluginMain()` to handle ADD/DEL commands
+
+2. **ADD Command Process**:
+   - Parses configuration (ENI ID, MAC address, IP addresses)
+   - Uses EC2 metadata service to find the ENI's network device name
+   - Calls `SetupContainerNamespace()` to move the ENI into the container
+
+3. **Key Engine Operations**:
+   - `GetInterfaceDeviceName()`: Finds the host device name using the MAC address
+   - `GetIPV4GatewayNetmask()`: Retrieves gateway/netmask from EC2 metadata
+   - `GetIPV6Gateway()`: Gets IPv6 gateway from routing table
+   - `SetupContainerNamespace()`: Moves the ENI into container's network namespace
+
+## Configuration Parameters
+
+The plugin accepts:
+- `eni`: ENI ID (required)
+- `mac`: MAC address (required) 
+- `ipv4-address`: Primary IPv4 address (required)
+- `ipv6-address`: IPv6 address (optional)
+- `block-instance-metadata`: Block metadata access (optional)
+- `stay-down`: Keep interface down (optional)
+
+## How It Works
+
+1. The plugin receives an ENI that's already attached to the EC2 instance
+2. It uses the MAC address to find the corresponding network interface on the host
+3. It retrieves network configuration (gateway, netmask) from EC2 metadata service
+4. It moves the entire ENI device into the container's network namespace
+5. Optionally starts DHCP client for lease renewal
+
+This gives containers direct access to ENIs with their own IP addresses, enabling advanced networking features like security groups per container.
+
+
+
+# ECS Bridge and IPAM Plugins
+
+## [ECS Bridge Plugin](https://github.com/aws/amazon-ecs-cni-plugins/tree/master/plugins/ecs-bridge)
+
+### Overview
+The ECS Bridge plugin creates a bridge network to connect containers to the ECS Agent's credentials endpoint. It creates a bridge device and veth pairs to enable communication between containers and the host.
+
+### Key Components
+
+**Main Flow**:
+1. **Bridge Creation**: Creates or reuses a bridge device (e.g., `ecs-br0`)
+2. **Veth Pair Creation**: Creates a virtual ethernet pair - one end in container namespace, one on host
+3. **IPAM Integration**: Calls the ECS IPAM plugin to allocate IP addresses
+4. **Interface Configuration**: Configures both ends of the veth pair with IP addresses and routes
+
+**Key Operations**:
+- `CreateBridge()`: Creates the bridge device with specified MTU
+- `CreateVethPair()`: Creates veth pair connecting container to host
+- `AttachHostVethInterfaceToBridge()`: Connects host veth to bridge
+- `RunIPAMPluginAdd()`: Calls IPAM plugin for IP allocation
+- `ConfigureContainerVethInterface()`: Sets up container's network interface
+- `ConfigureBridge()`: Configures bridge with gateway IP
+
+### Configuration Parameters
+- `bridge`: Bridge name (required)
+- `ipam`: IPAM configuration (required)
+- `mtu`: Maximum transmission unit (optional)
+
+## [ECS IPAM Plugin](https://github.com/aws/amazon-ecs-cni-plugins/tree/master/plugins/ipam)
+
+### Overview
+The ECS IPAM (IP Address Management) plugin allocates IP addresses from a specified subnet and manages IP address assignments using a BoltDB database for persistence.
+
+### Key Components
+
+**IP Management**:
+- Uses BoltDB for persistent IP address tracking
+- Allocates IPs from a configured subnet (e.g., `169.254.172.0/22`)
+- Tracks last known IP to optimize allocation
+- Supports both automatic and manual IP assignment
+
+**Main Operations**:
+- `Add()`: Allocates an IP address and returns network configuration
+- `Del()`: Releases an IP address back to the pool
+- `GetAvailableIP()`: Finds next available IP in subnet
+- `Assign()`: Marks specific IP as used
+- `Release()`: Frees an IP address
+
+### Configuration Parameters
+- `ipv4-subnet`: CIDR block for allocations (required)
+- `ipv4-address`: Specific IP to assign (optional)
+- `ipv4-gateway`: Gateway IP (optional, defaults to .1)
+- `ipv4-routes`: Routes to add to container (optional)
+- `id`: Unique identifier for IP assignment (optional)
+
+## How They Work Together
+
+1. **Bridge Plugin Invocation**: ECS Agent calls bridge plugin with configuration
+2. **Bridge Setup**: Plugin creates bridge device and veth pair
+3. **IPAM Call**: Bridge plugin calls IPAM plugin to get IP allocation
+4. **IP Assignment**: IPAM plugin allocates IP from subnet and stores in database
+5. **Interface Configuration**: Bridge plugin configures container interface with allocated IP
+6. **Route Setup**: Adds routes for ECS credentials endpoint communication
+
+This enables containers to communicate with the ECS Agent's credentials endpoint at `169.254.170.2` while maintaining network isolation.
+
+# Conclusion
+
+Diving into ECS networking internals shows how sophisticated systems can appear simple from the outside. Network namespaces provide the isolation, CNI plugins manage the complexity, and developers get clean abstractions. Sometimes the
+best engineering is the kind you never have to think about.
 
 ---
 
