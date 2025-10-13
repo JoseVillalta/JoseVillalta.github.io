@@ -10,6 +10,10 @@ description: "Ever wondered what happens under the hood when you launch an ECS t
 
 What goes into a network namespace? What's a CNI plugin? This blog post explores the contents of a network namespace and then provides links to the open source code that creates and configures namespaces for containarized workloads running on Fargate and ECS Managed Instances. 
 
+## Background and Motivation
+
+When you launch a task in ECS Managed Instances you can pick two network modes, awsvpc and host. In this series of post I want to explain the role in the CNI plugins have in creating and setting up network namespaces for customer tasks. In awsvpc each task receives its own elastic network interface (ENI) and private IPv4 address. Under the hood the code that creates and manages network namespaces (netns) for Fargate also handles Managed Instances. The plugins that handles this setup are open source but they are somewhat hidden behind the netlib platform API (as they should) so the typical dataplane engineer does not see the plugin code on day-to-day therefore i's' kind of a black box to most folks in my team, but it doesn't have to be. 
+
 ## What are network namespaces for?
 
 A Linux namespace is a construct that creates an isolated copy of the networking stack. Namespaces allows multiple ECS tasks to run on the same host with different IP addresses, DNS configurations, and route tables. 
@@ -421,6 +425,47 @@ This enables containers to communicate with the ECS Agent's credentials endpoint
 
 Diving into ECS networking internals shows how sophisticated systems can appear simple from the outside. Network namespaces provide the isolation, CNI plugins manage the complexity, and developers get clean abstractions. Sometimes the
 best engineering is the kind you never have to think about.
+
+# Further resources
+
+## ECS Documentation
+[Networking for ECS Managed Instances](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/managed-instance-networking.html)
+
+## ECS Agent netlib library
+This is where the code that invokes the CNIs live:
+[netlib](https://github.com/aws/amazon-ecs-agent/tree/master/ecs-agent/netlib)
+
+## CNI plugins source code
+This package contains the bridge, eni and IPAM plugins, which are the "bread and butter" of network configuration. They are used by both Fargate and Managed Instances:
+[ecs-cni-plugins](https://github.com/aws/amazon-ecs-cni-plugins/tree/master/plugins)
+
+Special CNIs that are aws vpc specific. Managed Instances make use of the vpc-branch-eni plugin to configure trunk and branch ENIs. [Trunking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-instance-eni.html) is an AWS feature that allows for more task density on hosts by giving the capability to pack more ENIs per instance. 
+
+[vpc-cni-plugins](https://github.com/aws/amazon-vpc-cni-plugins/tree/master/plugins/vpc-branch-eni)
+
+## IP Command 
+
+Source Code for iproute, the networking utility that powers the CNI plugins:
+[iproute2](https://github.com/iproute2/iproute2?tab=readme-ov-file)
+
+Netlink Protocol
+[netlink](https://docs.kernel.org/userspace-api/netlink/intro.html)
+
+## Linux Networking Resources
+Official documentation
+[networking](https://linux-kernel-labs.github.io/refs/heads/master/labs/networking.html)
+
+Free Online Books
+[Computer Networks: A System Approach](https://book.systemsapproach.org/)
+[Software-Defined Networks: A Systems Approach](https://sdn.systemsapproach.org/)
+
+## My favorite networking books
+[Understanding Linux Network Internals: Guided Tour to Networking on Linux](https://www.amazon.com/Understanding-Linux-Network-Internals-Networking/dp/0596002556) is a bit dated but still good source of background.
+
+I saw this book in [Julia Evans bookshelf](https://jvns.ca/bookshelf/) Julia is an excellent software engineer and gifted technical writer, I cannot recommend reading her blog highly enough. 
+[Networking for System Administrators](https://www.amazon.com/Networking-Systems-Administrators-Mastery-Book-ebook/dp/B00STLTH74)
+
+Alright, this post is getting long, I'll stop now, but come back for the next installation where I'll go over what I diddn't get a chance to get into. 
 
 ---
 

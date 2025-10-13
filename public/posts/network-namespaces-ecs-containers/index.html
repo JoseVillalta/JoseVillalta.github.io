@@ -136,6 +136,8 @@
 </div>
   </header> 
   <div class="post-content"><p>What goes into a network namespace? What&rsquo;s a CNI plugin? This blog post explores the contents of a network namespace and then provides links to the open source code that creates and configures namespaces for containarized workloads running on Fargate and ECS Managed Instances.</p>
+<h2 id="background-and-motivation">Background and Motivation<a hidden class="anchor" aria-hidden="true" href="#background-and-motivation">#</a></h2>
+<p>When you launch a task in ECS Managed Instances you can pick two network modes, awsvpc and host. In this series of post I want to explain the role in the CNI plugins have in creating and setting up network namespaces for customer tasks. In awsvpc each task receives its own elastic network interface (ENI) and private IPv4 address. Under the hood the code that creates and manages network namespaces (netns) for Fargate also handles Managed Instances. The plugins that handles this setup are open source but they are somewhat hidden behind the netlib platform API (as they should) so the typical dataplane engineer does not see the plugin code on day-to-day therefore i&rsquo;s&rsquo; kind of a black box to most folks in my team, but it doesn&rsquo;t have to be.</p>
 <h2 id="what-are-network-namespaces-for">What are network namespaces for?<a hidden class="anchor" aria-hidden="true" href="#what-are-network-namespaces-for">#</a></h2>
 <p>A Linux namespace is a construct that creates an isolated copy of the networking stack. Namespaces allows multiple ECS tasks to run on the same host with different IP addresses, DNS configurations, and route tables.</p>
 <p><img loading="lazy" src="/img/v2-SingleBridge-Page-4.drawio.png" alt="Network Namespaces Overview"  />
@@ -492,6 +494,36 @@
 <li><strong>Route Setup</strong>: Adds routes for ECS credentials endpoint communication</li>
 </ol>
 <p>This enables containers to communicate with the ECS Agent&rsquo;s credentials endpoint at <code>169.254.170.2</code> while maintaining network isolation.</p>
+<h1 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h1>
+<p>Diving into ECS networking internals shows how sophisticated systems can appear simple from the outside. Network namespaces provide the isolation, CNI plugins manage the complexity, and developers get clean abstractions. Sometimes the
+best engineering is the kind you never have to think about.</p>
+<h1 id="further-resources">Further resources<a hidden class="anchor" aria-hidden="true" href="#further-resources">#</a></h1>
+<h2 id="ecs-documentation">ECS Documentation<a hidden class="anchor" aria-hidden="true" href="#ecs-documentation">#</a></h2>
+<p><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/managed-instance-networking.html">Networking for ECS Managed Instances</a></p>
+<h2 id="ecs-agent-netlib-library">ECS Agent netlib library<a hidden class="anchor" aria-hidden="true" href="#ecs-agent-netlib-library">#</a></h2>
+<p>This is where the code that invokes the CNIs live:
+<a href="https://github.com/aws/amazon-ecs-agent/tree/master/ecs-agent/netlib">netlib</a></p>
+<h2 id="cni-plugins-source-code">CNI plugins source code<a hidden class="anchor" aria-hidden="true" href="#cni-plugins-source-code">#</a></h2>
+<p>This package contains the bridge, eni and IPAM plugins, which are the &ldquo;bread and butter&rdquo; of network configuration. They are used by both Fargate and Managed Instances:
+<a href="https://github.com/aws/amazon-ecs-cni-plugins/tree/master/plugins">ecs-cni-plugins</a></p>
+<p>Special CNIs that are aws vpc specific. Managed Instances make use of the vpc-branch-eni plugin to configure trunk and branch ENIs. <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-instance-eni.html">Trunking</a> is an AWS feature that allows for more task density on hosts by giving the capability to pack more ENIs per instance.</p>
+<p><a href="https://github.com/aws/amazon-vpc-cni-plugins/tree/master/plugins/vpc-branch-eni">vpc-cni-plugins</a></p>
+<h2 id="ip-command">IP Command<a hidden class="anchor" aria-hidden="true" href="#ip-command">#</a></h2>
+<p>Source Code for iproute, the networking utility that powers the CNI plugins:
+<a href="https://github.com/iproute2/iproute2?tab=readme-ov-file">iproute2</a></p>
+<p>Netlink Protocol
+<a href="https://docs.kernel.org/userspace-api/netlink/intro.html">netlink</a></p>
+<h2 id="linux-networking-resources">Linux Networking Resources<a hidden class="anchor" aria-hidden="true" href="#linux-networking-resources">#</a></h2>
+<p>Official documentation
+<a href="https://linux-kernel-labs.github.io/refs/heads/master/labs/networking.html">networking</a></p>
+<p>Free Online Books
+<a href="https://book.systemsapproach.org/">Computer Networks: A System Approach</a>
+<a href="https://sdn.systemsapproach.org/">Software-Defined Networks: A Systems Approach</a></p>
+<h2 id="my-favorite-networking-books">My favorite networking books<a hidden class="anchor" aria-hidden="true" href="#my-favorite-networking-books">#</a></h2>
+<p><a href="https://www.amazon.com/Understanding-Linux-Network-Internals-Networking/dp/0596002556">Understanding Linux Network Internals: Guided Tour to Networking on Linux</a> is a bit dated but still good source of background.</p>
+<p>I saw this book in <a href="https://jvns.ca/bookshelf/">Julia Evans bookshelf</a> Julia is an excellent software engineer and gifted technical writer, I cannot recommend reading her blog highly enough.
+<a href="https://www.amazon.com/Networking-Systems-Administrators-Mastery-Book-ebook/dp/B00STLTH74">Networking for System Administrators</a></p>
+<p>Alright, this post is getting long, I&rsquo;ll stop now, but come back for the next installation where I&rsquo;ll go over what I diddn&rsquo;t get a chance to get into.</p>
 <hr>
 <p><em>This deep dive into ECS networking shows the sophisticated engineering that makes container isolation possible. Network namespaces provide the foundation for secure, isolated networking while CNI plugins abstract away the complexity for developers. Understanding these internals helps appreciate the elegant solutions that power modern container orchestration.</em></p>
 

@@ -131,7 +131,7 @@
   </header>
   <section class="entry-content">
     <p>What goes into a network namespace? What’s a CNI plugin? This blog post explores the contents of a network namespace and then provides links to the open source code that creates and configures namespaces for containarized workloads running on Fargate and ECS Managed Instances.
-What are network namespaces for? A Linux namespace is a construct that creates an isolated copy of the networking stack. Namespaces allows multiple ECS tasks to run on the same host with different IP addresses, DNS configurations, and route tables.
+Background and Motivation When you launch a task in ECS Managed Instances you can pick two network modes, awsvpc and host. In this series of post I want to explain the role in the CNI plugins have in creating and setting up network namespaces for customer tasks. In awsvpc each task receives its own elastic network interface (ENI) and private IPv4 address. Under the hood the code that creates and manages network namespaces (netns) for Fargate also handles Managed Instances. The plugins that handles this setup are open source but they are somewhat hidden behind the netlib platform API (as they should) so the typical dataplane engineer does not see the plugin code on day-to-day therefore i’s’ kind of a black box to most folks in my team, but it doesn’t have to be.
 ...</p>
   </section>
   <footer class="entry-footer">&lt;span title=&#39;2025-10-12 17:12:00 -0700 PDT&#39;&gt;October 12, 2025&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>
