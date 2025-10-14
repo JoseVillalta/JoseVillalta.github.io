@@ -1,5 +1,5 @@
 ---
-title: "How to be Rigth a Lot (or at least Not Wrong A Lot)"
+title: "How to be Right a Lot (or at least Not Wrong A Lot)"
 date: 2025-03-14T15:53:03-07:00
 draft: fase
 ---
