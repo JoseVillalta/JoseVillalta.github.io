@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Understanding Container Networking | Yes Way Jose</title>
+<meta name="keywords" content="">
+<meta name="description" content="The Problem Containers Solve
+Docker emerged as a lightweight alternative to virtual machines. VMs consumed significant resources and took 3-5 minutes to boot, making horizontal scaling expensive. Containers package applications with dependencies into images that start in seconds, not minutes.
+The Networking Challenge
+Without network connectivity, containers offer limited utility. Running a single container on host networking mode works fine - the process accesses the host machine&rsquo;s network resources directly. But what happens when you need:">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/understanding-container-networking/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.48a18943c2fc15c38a372b8dde1f5e5dc0bc64fa6cb90f5a817d2f8c76b7f3ae.css" integrity="sha256-SKGJQ8L8FcOKNyuN3h9eXcC8ZPpsuQ9agX0vjHa3864=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2eadbb982468c11a433a3e291f01326f2ba43f065e256bf792dbd79640a92316.js" integrity="sha256-Lq27mCRowRpDOj4pHwEybyukPwZeJWv3ktvXlkCpIxY="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/understanding-container-networking/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Yes Way Jose (Alt + H)">Yes Way Jose</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/experience/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://joseavillalta.blogspot.com/" title="Personal Blog">
+                    <span>Personal Blog</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Understanding Container Networking
+    </h1>
+    <div class="post-meta">&lt;span title=&#39;2025-11-09 12:47:55 -0800 PST&#39;&gt;November 9, 2025&lt;/span&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><h3 id="the-problem-containers-solve">The Problem Containers Solve<a hidden class="anchor" aria-hidden="true" href="#the-problem-containers-solve">#</a></h3>
+<p>Docker emerged as a lightweight alternative to virtual machines. VMs consumed significant resources and took 3-5 minutes to boot, making horizontal scaling expensive. Containers package applications with dependencies into images that start in seconds, not minutes.</p>
+<h3 id="the-networking-challenge">The Networking Challenge<a hidden class="anchor" aria-hidden="true" href="#the-networking-challenge">#</a></h3>
+<p>Without network connectivity, containers offer limited utility. Running a single container on host networking mode works fine - the process accesses the host machine&rsquo;s network resources directly. But what happens when you need:</p>
+<ul>
+<li>Multiple containerized services with different network requirements on the same machine</li>
+<li>Multiple replicas of the same container on one host</li>
+</ul>
+<p>Consider running three Nginx servers on the same host. Each defaults to port 80. How can multiple containers use the same port without conflicts?</p>
+<h3 id="port-mapping-solution">Port Mapping Solution<a hidden class="anchor" aria-hidden="true" href="#port-mapping-solution">#</a></h3>
+<p>Docker solves this using <strong>port mapping</strong> with bridge networking mode. Each container gets its own network namespace, allowing services to run simultaneously despite using identical internal ports.</p>
+<p><strong>Example: Three Nginx Containers</strong></p>
+<pre tabindex="0"><code>Container 1: Internal port 80 → Host port 8081
+Container 2: Internal port 80 → Host port 8082  
+Container 3: Internal port 80 → Host port 8083
+</code></pre><p>External traffic arrives at the host&rsquo;s mapped ports (8081, 8082, 8083) and Docker routes it to the appropriate container&rsquo;s port 80.</p>
+<h3 id="how-bridge-mode-works">How Bridge Mode Works<a hidden class="anchor" aria-hidden="true" href="#how-bridge-mode-works">#</a></h3>
+<p>Docker&rsquo;s bridge networking creates isolated network namespaces for each container:</p>
+<ol>
+<li><strong>Container Creation</strong>: Docker assigns each container its own network namespace</li>
+<li><strong>Port Mapping</strong>: Maps host ports to container ports via iptables rules</li>
+<li><strong>Traffic Routing</strong>: External requests to host ports get forwarded to container ports</li>
+<li><strong>Isolation</strong>: Containers operate independently while remaining externally accessible</li>
+</ol>
+<h3 id="technical-implementation">Technical Implementation<a hidden class="anchor" aria-hidden="true" href="#technical-implementation">#</a></h3>
+<p>Under the hood, Docker uses:</p>
+<ul>
+<li><strong>Network namespaces</strong> for isolation</li>
+<li><strong>iptables rules</strong> for port forwarding</li>
+<li><strong>Bridge networks</strong> to connect containers to the host</li>
+<li><strong>Virtual ethernet pairs</strong> (veth) to link namespaces</li>
+</ul>
+<p>This architecture enables multiple containers to share host resources while maintaining network isolation and external accessibility.</p>
+<h3 id="key-benefits">Key Benefits<a hidden class="anchor" aria-hidden="true" href="#key-benefits">#</a></h3>
+<ul>
+<li><strong>Resource Efficiency</strong>: Multiple services on one host without port conflicts</li>
+<li><strong>Isolation</strong>: Each container has its own network stack</li>
+<li><strong>Scalability</strong>: Easy horizontal scaling with port mapping</li>
+<li><strong>Flexibility</strong>: Services can use standard ports internally regardless of external mapping</li>
+</ul>
+<p>Container port mapping transforms complex networking challenges into simple configuration, enabling the container revolution that powers modern application deployment.</p>
+<h3 id="iptables-the-engine-behind-port-mapping">iptables: The Engine Behind Port Mapping<a hidden class="anchor" aria-hidden="true" href="#iptables-the-engine-behind-port-mapping">#</a></h3>
+<p>The iptables firewall utility controls network traffic in Linux systems through tables, chains, and rules. Understanding iptables helps explain how Docker implements port mapping.</p>
+<h4 id="core-components">Core Components<a hidden class="anchor" aria-hidden="true" href="#core-components">#</a></h4>
+<p><strong>Tables</strong> organize rules by function:</p>
+<ul>
+<li><code>filter</code>: Controls packet filtering (allow/deny traffic)</li>
+<li><code>nat</code>: Handles Network Address Translation</li>
+<li><code>mangle</code>: Modifies packet headers</li>
+<li><code>raw</code>: Configures exemptions from connection tracking</li>
+<li><code>security</code>: Enforces MAC (Mandatory Access Control) rules</li>
+</ul>
+<p><strong>Chains</strong> determine when rules process packets:</p>
+<ul>
+<li><code>INPUT</code>: Packets destined for local system</li>
+<li><code>OUTPUT</code>: Packets generated by local system</li>
+<li><code>FORWARD</code>: Packets routed through the system</li>
+<li><code>PREROUTING</code>: Packets entering the network stack</li>
+<li><code>POSTROUTING</code>: Packets leaving the network stack</li>
+</ul>
+<h4 id="basic-command-structure">Basic Command Structure<a hidden class="anchor" aria-hidden="true" href="#basic-command-structure">#</a></h4>
+<p>iptables commands follow this syntax:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iptables <span style="color:#f92672">[</span>-t table<span style="color:#f92672">]</span> -A chain rule-specification
+</span></span></code></pre></div><p>Example rules:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Allow incoming SSH connections</span>
+</span></span><span style="display:flex;"><span>iptables -A INPUT -p tcp --dport <span style="color:#ae81ff">22</span> -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Drop all incoming traffic from specific IP</span>
+</span></span><span style="display:flex;"><span>iptables -A INPUT -s 192.168.1.100 -j DROP
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Allow established connections</span>
+</span></span><span style="display:flex;"><span>iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+</span></span></code></pre></div><h4 id="common-operations">Common Operations<a hidden class="anchor" aria-hidden="true" href="#common-operations">#</a></h4>
+<p>View current rules:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># List all rules</span>
+</span></span><span style="display:flex;"><span>iptables -L
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Show rules with line numbers</span>
+</span></span><span style="display:flex;"><span>iptables -L --line-numbers
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display packet counts</span>
+</span></span><span style="display:flex;"><span>iptables -L -v
+</span></span></code></pre></div><p>Manage rules:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Delete rule by chain and number</span>
+</span></span><span style="display:flex;"><span>iptables -D INPUT <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Clear all rules in a chain</span>
+</span></span><span style="display:flex;"><span>iptables -F INPUT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Save rules permanently</span>
+</span></span><span style="display:flex;"><span>iptables-save &gt; /etc/iptables/rules.v4
+</span></span></code></pre></div><h4 id="best-practices">Best Practices<a hidden class="anchor" aria-hidden="true" href="#best-practices">#</a></h4>
+<ol>
+<li>Create a default deny policy:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iptables -P INPUT DROP
+</span></span><span style="display:flex;"><span>iptables -P FORWARD DROP
+</span></span><span style="display:flex;"><span>iptables -P OUTPUT ACCEPT
+</span></span></code></pre></div><ol start="2">
+<li>Allow loopback traffic:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iptables -A INPUT -i lo -j ACCEPT
+</span></span><span style="display:flex;"><span>iptables -A OUTPUT -o lo -j ACCEPT
+</span></span></code></pre></div><ol start="3">
+<li>Allow established connections:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+</span></span></code></pre></div><h4 id="common-use-cases">Common Use Cases<a hidden class="anchor" aria-hidden="true" href="#common-use-cases">#</a></h4>
+<ol>
+<li>Port forwarding:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iptables -t nat -A PREROUTING -p tcp --dport <span style="color:#ae81ff">80</span> -j REDIRECT --to-port <span style="color:#ae81ff">8080</span>
+</span></span></code></pre></div><ol start="2">
+<li>Load balancing:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iptables -A PREROUTING -t nat -p tcp --dport <span style="color:#ae81ff">80</span> -m statistic --mode nth --every <span style="color:#ae81ff">3</span> --packet <span style="color:#ae81ff">0</span> -j DNAT --to-destination 10.0.0.1:80
+</span></span><span style="display:flex;"><span>iptables -A PREROUTING -t nat -p tcp --dport <span style="color:#ae81ff">80</span> -m statistic --mode nth --every <span style="color:#ae81ff">2</span> --packet <span style="color:#ae81ff">0</span> -j DNAT --to-destination 10.0.0.2:80
+</span></span><span style="display:flex;"><span>iptables -A PREROUTING -t nat -p tcp --dport <span style="color:#ae81ff">80</span> -j DNAT --to-destination 10.0.0.3:80
+</span></span></code></pre></div><ol start="3">
+<li>Basic firewall:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Allow HTTP/HTTPS</span>
+</span></span><span style="display:flex;"><span>iptables -A INPUT -p tcp --dport <span style="color:#ae81ff">80</span> -j ACCEPT
+</span></span><span style="display:flex;"><span>iptables -A INPUT -p tcp --dport <span style="color:#ae81ff">443</span> -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Block ping floods</span>
+</span></span><span style="display:flex;"><span>iptables -A INPUT -p icmp -m limit --limit 1/s --limit-burst <span style="color:#ae81ff">1</span> -j ACCEPT
+</span></span></code></pre></div><h4 id="troubleshooting">Troubleshooting<a hidden class="anchor" aria-hidden="true" href="#troubleshooting">#</a></h4>
+<p>Debug traffic flows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Enable logging for dropped packets</span>
+</span></span><span style="display:flex;"><span>iptables -A INPUT -j LOG --log-prefix <span style="color:#e6db74">&#34;IPTables-Dropped: &#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Track packet matches</span>
+</span></span><span style="display:flex;"><span>iptables -L -v -n
+</span></span></code></pre></div><p>This tutorial covers basic iptables concepts and operations. For production environments, consider using higher-level tools. In AWS we use <a href="https://github.com/containernetworking/plugins">CNI plugins</a> for to achieve this.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 <a href="http://localhost:1313/">Yes Way Jose</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
