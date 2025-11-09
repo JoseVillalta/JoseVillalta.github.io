@@ -96,6 +96,18 @@ So now market forces, tech companies, politicians they are all competing for our
     </item>
     
     <item>
+      <title>Understanding Container Port Mapping</title>
+      <link>http://localhost:1313/posts/understanding-container-port-mapping/</link>
+      <pubDate>Thu, 19 Dec 2024 11:00:00 -0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/understanding-container-port-mapping/</guid>
+      <description>&lt;h3 id=&#34;the-problem-containers-solve&#34;&gt;The Problem Containers Solve&lt;/h3&gt;
+&lt;p&gt;Docker emerged as a lightweight alternative to virtual machines. VMs consumed significant resources and took 3-5 minutes to boot, making horizontal scaling expensive. Containers package applications with dependencies into images that start in seconds, not minutes.&lt;/p&gt;
+&lt;h3 id=&#34;the-networking-challenge&#34;&gt;The Networking Challenge&lt;/h3&gt;
+&lt;p&gt;Without network connectivity, containers offer limited utility. Running a single container on host networking mode works fine - the process accesses the host machine&amp;rsquo;s network resources directly. But what happens when you need:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Learning Go</title>
       <link>http://localhost:1313/posts/learning-go/</link>
       <pubDate>Tue, 27 Aug 2024 08:32:11 -0700</pubDate>
