@@ -1,47 +1,36 @@
 ---
 author: "Jose Villalta"
-title: "About me"
-#cover:
-  # image: "img/twitter_pic.jpg"
-  # image: "img/me_w_babe.jpg"
-  # image: "img/me_ireland2.jpg"
-
-
+title: "About Me"
 ---
-I am a Software Engineer at Amazon, working on the [AWS ECS Fargate Dataplane.](https://aws.amazon.com/blogs/containers/under-the-hood-fargate-data-plane/)
 
-Prior to Amazon, I worked at [Impinj](https://www.impinj.com/), a startup (at the time) that makes RFID chips. I worked on the software that tests the chips at the factory. This is where I made the jump from writing embedded software (C++, Wireless signal concepts) to Web Services (Ruby on Rail Applications backed by a MS-SQL Database) I learned about Containers here. I led the effort to break up a monolith back-end application into smaller, manageble microservices. We used Docker. 
+## About Me
 
-Before that I was an embedded software engineer at Motorola (Today Motorola Solutions) working on software-defined radios. I worked on the RF control layer that runs the radios for first responders (Police and Firefighters). The [APX P25 Radios](https://www.motorolasolutions.com/en_us/products/p25-products/apx-story.html) run on software I worked on. 
+I'm Jose Villalta, an infrastructure engineer at Amazon Web Services building the systems that power millions of containerized workloads. I maintain the Fargate agent - the data plane that creates and manages serverless containers at AWS scale.
 
-During college I was an intern (Co-op Program) for IBM. I was on the team that designed chips (ASIC Design) for the big servers. The team I was on wrote Verilog and VHDL. I wrote Perl scripts that parsed specs and generated test cases. This is where I learned to use the Linux Command Line. (I'm still learning) 
+### My Path to Infrastructure
 
-Before I become a softare developer I worked full time as a bank teller and part time as a Reservist in the Florida Army National Guard. Before that I was a sergeant in the United States Marine Corps Infantry stationed in Camp Lejuned but deployed all over the world. 
+My career has been about building systems that work when it matters most. I spent seven years at Motorola writing embedded software for P25 radios - the devices that first responders depend on when lives are on the line. Police and firefighters still use radios running code I helped build.
 
+At Impinj, I made the jump from embedded systems to distributed infrastructure. I built factory test software for RFID chips and led the transformation from a monolithic Ruby on Rails application to Docker-based microservices. This is where I fell in love with containers and the problems they solve at scale.
 
-## Life Story
+Before that, I interned at IBM on ASIC design teams, writing Perl scripts that generated test cases from chip specifications. I learned the Linux command line there, and I'm still learning.
 
-{{< figure src="/img/me_ireland2.jpg"  >}}
+My technical foundation: Bachelor's in Computer Engineering from Florida Atlantic University (2006), Master's in Electrical and Computer Engineering from University of Florida (2011), both earned while working full time. I've never stopped learning since.
 
-I was born in Venezuela and moved to Florida when I was 13, I went to the Marines right after high school. 
-In May 2001 I joined the Florida Guard and Enrolled in Florida Atlantic University.
-In 2002 I was lucky to marry an amazing woman. Early 2003 I got sent to Iraq, came back from that in March 2004. 
-Late 2005 my oldest girl was born and my life was transformed. 
-I gradudated from Florida Atlantic University in 2006 with a Bachelors's Degree in Computer Engineering.
-My youngest girl was born in 2007. 
-I got my Master's Degree In Electrical and Computer Engineering from the Univeristy of Florida in 2011. 
-I moved to Seattle in 2014.
-I have two bulldogs named Chicha and Petunia and they rule. 
+### Before Software
 
-## My personal interests, values and beliefs
+Before I became an engineer, I was a sergeant in the United States Marine Corps Infantry, stationed at Camp Lejeune and deployed around the world. After the Marines, I joined the Florida Army National Guard as a reservist while working full time as a bank teller and going to college at night. I was deployed to Iraq in 2003-2004 with the 124th Infantry (Florida National Guard).
 
--   I'm interested in philosophy, science, math, history and all things software. 
--   I love to [read](https://www.goodreads.com/user/show/5926316-jose).
--   I ski with my youngest daughter as often as I can. 
--   I love a good baseball game
--   I cry at the end of good movies. 
--   I prefer hard truths over comfortable lies
--   I value Liberty and Justice for all. 
--   I believe Democracy is better than all the other options. 
--   I am American by choice
--   Black Lives Matter
+I am American by choice - born in Venezuela, moved to Florida at 13, joined the Marines right after high school in 1998. I got married in 2002 to an amazing woman. My daughters were born in 2005 and 2007, and they transformed my life. I moved to Seattle in 2014. I have two bulldogs, Chicha and Petunia, who rule the house.
+
+{{< figure src="/img/me_ireland2.jpg" >}}
+
+### What Drives Me
+
+I build reliable infrastructure because I learned what "mission-critical" means in the Marines - when systems fail, people get hurt. I think about who technology serves because I've navigated systems not built for people like me. I care about sustainability because technical decisions at AWS scale have planetary impact.
+
+I believe in democracy, liberty, and justice for all. I prefer hard truths over comfortable lies. Black Lives Matter.
+
+### Outside of Work
+
+I love to read - philosophy, science, math, history, and anything about software and systems. I ski with my youngest daughter as often as I can. I love a good baseball game. I cry at the end of good movies. I'm interested in how things work and why they matter - whether that's container orchestration, democratic institutions, or the universe itself.
