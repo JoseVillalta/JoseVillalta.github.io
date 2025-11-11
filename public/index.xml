@@ -381,21 +381,40 @@ intend to improve my knowledge one day at time. You are welcome to follow along.
     </item>
     
     <item>
-      <title>Professional Experience</title>
+      <title>Professional Experience and Education</title>
       <link>http://localhost:1313/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/experience/</guid>
-      <description>&lt;h2 id=&#34;professional-experience-and-education&#34;&gt;Professional Experience and Education&lt;/h2&gt;
-&lt;h3 id=&#34;summary&#34;&gt;Summary&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Amazon&lt;/strong&gt; | 2018 - present&lt;br&gt;
-AWS Fargate Dataplane team - Building container orchestration infrastructure at scale using Go and Rust&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Impinj&lt;/strong&gt; | 2014 - 2018&lt;br&gt;
-Infrastructure engineer building factory test systems and breaking monoliths into microservices with Docker&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Motorola&lt;/strong&gt; | 2007 - 2014&lt;br&gt;
-Embedded software engineer writing mission-critical firmware for first responder radios&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IBM&lt;/strong&gt; | 2005 - 2006&lt;br&gt;
-Co-op intern on ASIC design teams, writing test automation for chip validation&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;h4 id=&#34;amazon-2018---present&#34;&gt;Amazon 2018 - present&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;AWS Fargate: Dataplane team. Writing Golang mostly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Worked on retail site for 2.5 years using the away team model.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;impinj-2014---2018&#34;&gt;Impinj 2014 - 2018&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Wrote Ruby on Rails&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;motorola-2007---2014&#34;&gt;Motorola 2007 - 2014&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Low level firmware&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;co-op-intern-at-ibm-2005---2006&#34;&gt;Co-op Intern at IBM 2005 - 2006&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;ASIC design model testing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Master&amp;rsquo;s Degree in Electrical and Computer Engineer from the University of Florida&lt;/li&gt;
+&lt;li&gt;Bachelor&amp;rsquo;s Degree in Computer Engineering from Florida Atlantic University&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;my-career-journey&#34;&gt;My Career Journey&lt;/h2&gt;
+&lt;p&gt;This is a more detailed narrative of my carreer so far. I&amp;rsquo;ve been lucky to work on cool projects solving interesting problems.&lt;/p&gt;</description>
     </item>
     
   </channel>

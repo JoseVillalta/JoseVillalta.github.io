@@ -8,7 +8,7 @@ params:
      homeInfoParams:
         Title: "Hi folks! I'm Jose. Welcome to my page"
         Content: >
-             I'm a father, husband and engineer living in Seattle. I write software for AWS.     
+             Infrastructure engineer at AWS building container orchestration at scale. Marine Corps veteran and immigrant who learned to build resilient systems by thriving through adversity.     
              
              
      socialIcons:

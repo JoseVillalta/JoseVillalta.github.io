@@ -1,6 +1,6 @@
 ---
 author: "Jose Villalta"
-title: "Professional Experience"
+title: "Professional Experience and Education"
 
 cover: 
    image: "img/spheres.jpg"
@@ -8,93 +8,93 @@ cover:
 
 ---
 
-## Professional Experience and Education
 
-### Summary
+## Summary
 
-**Amazon** | 2018 - present  
-AWS Fargate Dataplane team - Building container orchestration infrastructure at scale using Go and Rust
+#### Amazon 2018 - present
 
-**Impinj** | 2014 - 2018  
-Infrastructure engineer building factory test systems and breaking monoliths into microservices with Docker
+- AWS Fargate: Dataplane team. Writing Golang mostly. 
 
-**Motorola** | 2007 - 2014  
-Embedded software engineer writing mission-critical firmware for first responder radios
+- Worked on retail site for 2.5 years using the away team model. 
 
-**IBM** | 2005 - 2006  
-Co-op intern on ASIC design teams, writing test automation for chip validation
 
-### Education
+#### Impinj 2014 - 2018
+-  Wrote Ruby on Rails
 
-**Master's Degree in Electrical and Computer Engineering** - University of Florida (2011)  
-**Bachelor's Degree in Computer Engineering** - Florida Atlantic University (2006)  
-*Both earned while working full time*
 
----
+#### Motorola 2007 - 2014
+- Low level firmware
+
+
+#### Co-op Intern at IBM 2005 - 2006
+- ASIC design model testing
+
+
+## Education
+
+- Master's Degree in Electrical and Computer Engineer from the University of Florida
+- Bachelor's Degree in Computer Engineering from Florida Atlantic University
 
 ## My Career Journey
 
-This is the detailed story of my career so far. I've been lucky to work on systems that matter, solving problems that affect real people.
+This is a more detailed narrative of my carreer so far. I've been lucky to work on cool projects solving interesting problems. 
 
-### IBM (2005-2006) | Co-op Engineer Internship, Rochester, MN
+#### IBM 2005-2006 Co-op Engineer Internship. Rochester, MN
 
-**My career in tech started with a firm handshake and a pitch I had to make work.**
 
-It's 2005. I'm at a SHPE conference in Philadelphia, fresh back from a 15-month deployment in Iraq. I'm surrounded by hundreds of college students from big-name universities at a massive career fair - Georgia Tech kids in their bright yellow polos, students from MIT, Stanford. I'm just one more student from FAU, standing in a long line at the IBM booth.
+My career in tech started with a firm handshake.
 
-Then I notice someone walking around chatting with people. I step out of line.
+When I was in college a friend of mine urged me to join SHPE, next thing I know, I’m at a SHPE conference in Philly. The year is 2005 and I had just returned from a 15-month Iraq deployment. I found myself at a conference hall with hundreds of other college students at a career fair. The biggest booth there was the IBM booth. There was a long line of students eagerly waiting to submit their resumes. Most of the students there were from big name Universities, I can still see the Georgia Tech students with their bright yellow polo shirts I was just one more student from FAU. I notice there’s a guy walking around chatting with people. I suddenly stepped out of line to shake this man’s hand. 
 
-"Hello Sir, my name is Jose Villalta. I have a couple of things to tell you about me. I am a war veteran, I work full time to pay for school, I'm enrolled full time at FAU with a 3.8 GPA, my dad worked for IBM in the seventies, and I'd love to work for IBM now."
+“Hello Sir, my name is Jose Villalta. I have a couple of things to tell you about me. I am a war veteran, I work full time to pay for school, I am enrolled full time at FAU and I have a 3.8 GPA, my dad worked for IBM in the seventies, I’d love to work for IBM now”
 
-He looks at me, looks at my resume: "What do you want to work on, Software or Hardware?"
+The guy looks at me, looks at my resume and he says:
 
-One word sealed my fate: "Hardware."
+“What do you want to work on, Software or Hardware?”
 
-He handed me his business card and told me to email him what I just said. I did. After interviews in Dallas, I got an offer to join the ASIC Design group at IBM.
+I really wanted to say “I’ll do anything” but then one word sealed my fate:
 
-**What I learned:** Most internships are 12 weeks over the summer. Mine was six months full-time, on-site with the teams that design processors for mainframes, the Cell processor for Xbox and PlayStation, and more. I wrote Perl and Unix bash to parse requirement documents and generate test cases. I refactored factory tester scripts that validated silicon wafers in the fab. The domain was incredibly low-level - logic gate level, testing that AND gates behaved like AND gates.
+“Hardware”
 
-When my six months ended, I asked if I could work remotely. They said yes. (This was 2005 - remote work wasn't common then.) I stayed for another year and a half, planning to join full-time and move to Rochester. But in Q4 2006, the department was cut in half. My job was moving overseas.
+This man, gave me his business card and told me to tell him what I just said to him in an email and he’ll take care of me. 
+I did, and after a round of interviews in Dallas I got a job offer to work for the ASIC Design group at IBM. 
 
-**The lesson:** Systems fail. Plans change. You adapt.
+Internships usually last 12 weeks and are generally done over the summer. This was a six months long full-time gig. I was on site working alongside the folks that design processors, motherboards or chipsets for various products. My building housed the teams that worked on the processors and chips that powered mainframes, the cell processor that powered the X-box and play stations and others. My job was to write software that parsed requirement documents and generated test cases. I also re-factored a factory tester script that executed in the “fab” to make sure the silicon wafers that contain our chips still work. I wrote perl and Unix bash but the domain was very, very low level. Logic gate level stuff. Testing that AND gates behaved like AND gates and OR gates behaved like OR gates.  
 
----
+When my six months were up, I wanted to keep doing the job forever, so I asked if they’d let me work remotely and they said yes. (This is 2005 so it was not a common practice back then) 
 
-### Motorola (2007-2014) | Firmware Software Developer, Plantation, FL
 
-**My first job out of college was writing code that first responders depend on when lives are on the line.**
+I stayed in that group for one and a half years. I was planning on coming in as a full time employee and moving to Rochester but the department I was on got cut in half Q4 of 2006. One half was let go (I was not let go b/c I was an intern) and the other half was told their job was going to be moved to a different site in another country. 
 
-I joined Motorola as part of a new hire wave to work on Project Mackinaw - the APX series radios. These are the walkie-talkies that police officers and firefighters use. When someone calls 911, the people who respond use radios running software I helped build.
 
-I was assigned to the "low level" team working on the RF Deck. My code controlled and configured the RF hardware with precise timing to support the APCO P25 radio protocol. I worked on that product from initial design through launch, then stayed for new releases and features for seven years.
 
-**What I learned:** Real-time operating systems. Memory and power constraints. The importance of reliability when failure means someone doesn't get backup. My team lead and mentor, Martin Elmore (now VP), gave me one lesson that shaped my entire approach to engineering: *"Catch your own bugs first. Don't let other people find your bugs."*
 
-We wrote C++ in an unusual way - drawing UML diagrams that a tool (IBM Rational Rose) converted to code. Source control was machine-generated XML, not .h or .cpp files. Merges were nightmares. The tool was slow and crashed if the XML wasn't perfectly formatted.
 
-I didn't know any better - this was my first job out of college. But I loved it. I made lifelong friends. I learned about radios, signal processing, wireless communication, and software engineering processes. I learned what "mission-critical" actually means.
+#### Motorola 2007-2014 Firmware Software Developer. Plantation, FL
 
-**The lesson:** When your code powers radios that save lives, you build it right the first time.
 
----
+My first job out of college was writing embedded software for the “low-level” team. I was brought in as part of a new hire wave to work on a new radio product.  Project Mackinaw:  The “APX” series radios. The previous projects were all in C and Assembly this new project was implemented in C++
 
-### Impinj (2014-2018) | Seattle, WA
+ I was assigned to the “low level” team working on the “RF Deck” My code interacted with the hardware abstraction layer (HAL) mostly drivers for RF chips. I learned a lot working there. I learned to apply real-time operating system concepts, memory and power constraints. My component was all about controlling and configuring the RF hardware with precise timing in order to support APCO radio protocol (Think police and firefighters walkie talkies). I worked on that product from design to launch and then stayed for new releases and features for about 7 years. 
 
-**I moved to Seattle to work for Impinj, a VC-funded startup that designed RFID chips. This is where I fell in love with distributed systems and containers.**
+I learned C++ there, but not how most people write it. Our team was doing this thing where theoretically we draw UML and this tool (IBM Rational Rose) would convert the UML to C++ code that will then get compiled down to .out files executable on the board. The UML to C++ thing was...uh, one way to do it. I didn’t know any better since this was my first gig out of college I never thought there was something off with doing things that way and never questioned it. Source control was not .h or .cpp files, instead the source code was in ...XML. Machine-generated XML to be precise, this was not optimal when doing file merges. The tool was slow and it would crash if the xml was not properly formatted. 
 
-I was hired to build a new version of the factory tester software - a C++ application that validated silicon wafers in our fabs. After that project shipped, I joined the Factory Services team, building systems to ingest manufacturing data (test results, location, quantities, status) from factories around the globe to support engineering, operations, and business teams.
+I did love working there though. I made life-long friends in that team. I learned a lot about radios, signal processing, information theory, wireless communication as well as software engineering processes. Lean sigma, and much more. 
 
-The system was a set of Ruby on Rails applications backed by MS SQL. This was my first time writing code for computers distributed across the globe that needed to coordinate and present accurate data. I was stepping from the embedded world into distributed infrastructure.
+The best boss I ever had was my team lead, mentor then manager and now VP Martin Elmore. When I was a new hire he gave me one valuable lesson: “Catch your own bugs first, don’t let other people find your bugs” 
 
-**Then I volunteered to be the "DevOps" person for my team, without really knowing what DevOps was.**
 
-I immersed myself in containers. I remember attending a tech meetup at Google's Fremont campus where someone presented a new orchestration technology called "Kubernetes." I thought it was too complex for our use case. (I was wrong about that.) I led the effort to break up our Rails monolith so each service could be deployed separately in its own VM instead of one server hosting everything. I used Docker Swarm for orchestration, Chef and Ansible for infrastructure management.
+#### Impinj 2014 - 2018 Seattle, WA
 
-**What I learned:** Working on problems nobody else had solved before. Building systems that coordinate across continents. The power of containers to simplify complex deployments. Impinj was a great place to work with smart people tackling hard technical problems.
+I moved to Seattle to work for Impinj, back then it was still a VC-funded startup that designed and built RFID chips. I was hired to work on a new version of the factory tester software. A C++ application that validated the silicon wafers in our "fabs" after that project completed I found myself part of the "Factory Services" team. My new system's job was to ingest all the data generated during the manufacturing process (test results, location, quantities, status) in order to support the engineering team, the operations and business team. 
 
-**The lesson:** Sometimes the best career moves happen when you volunteer for something you don't fully understand yet.
+The system was a set of Ruby on Rails applications backed by a MS SQL database. This was my first time writing code that worked by communicating with other computers connected via a network. Computers distributed across the globe that needed to coordinate and present accurate data to our customers. 
 
----
+Once again, my career took a turn on a lark. I volunteered to be the "Dev Ops" person for my team, without really knowing what dev ops was. 
+
+I quickly immersed myself in the world of containers. As a sidenote I remember going to a tech meetup hosted by Google in their Fremont campus. I heard a presentation about an exciting new tech to orchestrate containers called Kubernettes. I understood back then that this tech would influence how people run containers but I thought it was too complex for our use case at work. I worked on the effort to break up our rails services so that each can get deployed seperately in their own VM as opposed to having a single server hosting every app. I used docker swarm for the orchestration. Chef and Ansible for Infrastructure management. 
+
+I learned a ton at Impinj, sometimes it felt crazy to be working on a problem that nobody else had worked on. Impinj is a great place to work with good people and interesting technical problems. 
 
 ### Amazon (2018-present) | Seattle, WA
 
@@ -115,9 +115,3 @@ I joined the AWS Fargate Dataplane team. I maintain the Fargate Agent - the proc
 This is where my whole career has been leading: embedded systems taught me how hardware works, Motorola taught me what mission-critical means, Impinj taught me distributed systems and containers, retail taught me scale and complexity. Now I'm applying all of it to build infrastructure that has to work, every time, at AWS scale.
 
 **The lesson:** The best technology is invisible until you need it - then it's absolutely dependable. That's what I build.
-
----
-
-## What's Next
-
-I'm focused on deepening my expertise in container orchestration, becoming a technical leader who shapes not just how we build infrastructure, but why we build it the way we do. I want to influence the strategic direction of infrastructure that serves humanity at scale - reliable, sustainable, and built for everyone.
