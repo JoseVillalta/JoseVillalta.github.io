@@ -1,7 +1,9 @@
 baseURL: https://JoseVillalta.github.io
 languageCode: en-us
 title: "Yes Way Jose"
-author: "Jose Villalta"
+author:
+  name: "Jose Villalta"
+  email: "you@example.com"
 theme: "PaperMod"
 
 params:

@@ -6,12 +6,14 @@
     <description>Recent content in Posts on Yes Way Jose</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>you@example.com (Jose Villalta)</managingEditor>
+    <webMaster>you@example.com (Jose Villalta)</webMaster>
     <lastBuildDate>Sun, 09 Nov 2025 12:47:55 -0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding Container Networking</title>
       <link>http://localhost:1313/posts/understanding-container-networking/</link>
       <pubDate>Sun, 09 Nov 2025 12:47:55 -0800</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/understanding-container-networking/</guid>
       <description>&lt;h3 id=&#34;the-problem-containers-solve&#34;&gt;The Problem Containers Solve&lt;/h3&gt;
 &lt;p&gt;Docker emerged as a lightweight alternative to virtual machines. VMs consumed significant resources and took 3-5 minutes to boot, making horizontal scaling expensive. Containers package applications with dependencies into images that start in seconds, not minutes.&lt;/p&gt;
@@ -23,7 +25,7 @@
       <title>My AI and Machine Learning Reading Journey</title>
       <link>http://localhost:1313/posts/ai-readings/</link>
       <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/ai-readings/</guid>
       <description>A look at the AI and ML books that shaped my understanding of artificial intelligence, data science, and the ethics of technology.</description>
     </item>
@@ -32,7 +34,7 @@
       <title>A Deep Dive into Network Namespaces in AWS ECS Containers</title>
       <link>http://localhost:1313/posts/network-namespaces-ecs-containers/</link>
       <pubDate>Sun, 12 Oct 2025 17:12:00 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/network-namespaces-ecs-containers/</guid>
       <description>Ever wondered what happens under the hood when you launch an ECS task with awsvpc networking? Let&amp;#39;s explore how network namespaces are put together when you run containers in ECS Managed Instances.</description>
     </item>
@@ -41,7 +43,7 @@
       <title>KPI for Career Success</title>
       <link>http://localhost:1313/posts/kpi-for-career-success/</link>
       <pubDate>Mon, 17 Mar 2025 08:22:45 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/kpi-for-career-success/</guid>
       <description>&lt;h2 id=&#34;what-is-the-one-metric-for-sucess-in-your-career&#34;&gt;What is the one metric for sucess in your career?&lt;/h2&gt;
 &lt;p&gt;Lately I&amp;rsquo;ve been thinking about what it means to grow in my career. Like, How do I know I am doing a good job? Is there a metric I can track?  It turns out there&amp;rsquo;s people way smarter than me that have already thought about that and written about it.&lt;/p&gt;
@@ -52,7 +54,7 @@
       <title>How to be Right a Lot (or at least Not Wrong A Lot)</title>
       <link>http://localhost:1313/posts/right-a-lot/</link>
       <pubDate>Fri, 14 Mar 2025 15:53:03 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/right-a-lot/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m lucky that I get to work with people who are good at what they do.
 The corporate-speak term we use at Amazon is the Leadership Principle of &amp;ldquo;Right A Lot&amp;rdquo;&lt;/p&gt;
@@ -66,7 +68,7 @@ It&amp;rsquo;s about being open to the possibility that you might be wrong. I lo
       <title>Practical Engineering</title>
       <link>http://localhost:1313/posts/practical-engineering/</link>
       <pubDate>Wed, 05 Mar 2025 09:21:38 -0800</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/practical-engineering/</guid>
       <description>&lt;h2 id=&#34;practical-engineering-by-peng-zhang&#34;&gt;Practical Engineering by Peng Zhang&lt;/h2&gt;
 &lt;p&gt;I want to give a quick shout out to Peng&amp;rsquo;s blog &lt;a href=&#34;peng.fyi&#34;&gt;peng.fyi&lt;/a&gt;
@@ -86,7 +88,7 @@ because:&lt;/p&gt;
       <title>The Sirens Call: How Attention Became the World&#39;s Most Endangered Resource</title>
       <link>http://localhost:1313/posts/the-sirens-call/</link>
       <pubDate>Wed, 05 Mar 2025 08:49:27 -0800</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/the-sirens-call/</guid>
       <description>&lt;h3 id=&#34;book-review&#34;&gt;Book Review&lt;/h3&gt;
 &lt;p&gt;I&amp;rsquo;m almost finished with &lt;a href=&#34;https://www.amazon.com/Sirens-Call-Attention-Endangered-Resource-ebook/dp/B0DDNGLSJP&#34;&gt;The Siren&amp;rsquo;s Call by Chris Hayes&lt;/a&gt;
@@ -101,7 +103,7 @@ So now market forces, tech companies, politicians they are all competing for our
       <title>How do you architech change? The answer is simple, but not always easy</title>
       <link>http://localhost:1313/posts/useful-strategies-for-growing/</link>
       <pubDate>Sat, 01 Mar 2025 16:13:55 -0800</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/useful-strategies-for-growing/</guid>
       <description>&lt;p&gt;This week I had an Eureka moment at work. You see, there are many things I see at work that I would like to improve. Technical debt in our codebase. Inefficient processes. Communication silos across teams. The list of things one can improve never ends, this is true in all software shops. System complixity grows as new functionality gets added, inefficiencies optimized, bugs fixed. Secuirty hardened, etc.&lt;/p&gt;
 &lt;p&gt;How do you increase the quality of your system without interrupting the flow? Well, obviously, you break it up, one tiny thing at time. That&amp;rsquo;s how. Yeah it&amp;rsquo;s obvious but (this is embarrasing to admit) I get the urge to make BIG changes, I&amp;rsquo;d like to rewrite whole chuncks of the codebase, I&amp;rsquo;d like to build a brand new release pipeline, and we might do that someday, but not today. When you have a team that&amp;rsquo;s busy doing the work, tidying up gets deprioritized. After all, that bug in prod needs to get fixed yesterday, that new feature needs to ship on time. Oh, by the way, the developer that was working on that thing your system depends on quit last week.&lt;/p&gt;</description>
@@ -111,7 +113,7 @@ So now market forces, tech companies, politicians they are all competing for our
       <title>Understanding Container Port Mapping</title>
       <link>http://localhost:1313/posts/understanding-container-port-mapping/</link>
       <pubDate>Thu, 19 Dec 2024 11:00:00 -0800</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/understanding-container-port-mapping/</guid>
       <description>&lt;h3 id=&#34;the-problem-containers-solve&#34;&gt;The Problem Containers Solve&lt;/h3&gt;
 &lt;p&gt;Docker emerged as a lightweight alternative to virtual machines. VMs consumed significant resources and took 3-5 minutes to boot, making horizontal scaling expensive. Containers package applications with dependencies into images that start in seconds, not minutes.&lt;/p&gt;
@@ -123,7 +125,7 @@ So now market forces, tech companies, politicians they are all competing for our
       <title>Learning Go</title>
       <link>http://localhost:1313/posts/learning-go/</link>
       <pubDate>Tue, 27 Aug 2024 08:32:11 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/learning-go/</guid>
       <description>&lt;p&gt;I have been an official Go programmer for three years now. Unlike many people in my team, I remember the day Google announced go. I don&amp;rsquo;t remember if it was in Hacker News or /programming reddit, but I do remember watching the go math package compiling in less than a second, at the time, I was writing C++ for an embedded system. Building the whole model as we used to say took 45 minutes, this compiled our C/C++ project into a .out file for an ARM9 and a C55 DSP. When I saw how quickly Go built I was like, wow. To be fair, our build was for a Real Time OS so it didn&amp;rsquo;t even include the C++ standard library. Most of the time, if I remember right, was spent linking everything. THe linker was getting it&amp;rsquo;s poor butt kicked. Anyyway, I looked at Rob Pike (?) on YouTube and I was like,&lt;/p&gt;</description>
     </item>
@@ -132,7 +134,7 @@ So now market forces, tech companies, politicians they are all competing for our
       <title>Awesome Falsehoods Programmers Believe</title>
       <link>http://localhost:1313/posts/awesome-falsehoods/</link>
       <pubDate>Wed, 08 Nov 2023 07:57:58 -0800</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/awesome-falsehoods/</guid>
       <description>&lt;h3 id=&#34;a-curated-list-of-falsehoods-programmers-believe-in&#34;&gt;A curated list of falsehoods programmers believe in.&lt;/h3&gt;
 &lt;p&gt;The Code we write is a representation of the things we believe are true about the world. Every one has just one name, right? Well, most of the time, yes. All of the time? No. If you write an app for yourself, or your small business most of these assumptions are fine. If you write code for millions of users, you are going to find exceptions. Some of them surprise me. Dealing with Time sucks, dealing with addresses, names, supporting multiple languages it&amp;rsquo;s really hard to get it right 100% of the time.&lt;/p&gt;</description>
@@ -142,7 +144,7 @@ So now market forces, tech companies, politicians they are all competing for our
       <title>Book Summary: Thinking in Systems by Donella Meadows</title>
       <link>http://localhost:1313/posts/systems-book-notes/</link>
       <pubDate>Sat, 04 Nov 2023 16:18:25 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/systems-book-notes/</guid>
       <description>&lt;h2 id=&#34;book-summary-thinking-in-systems&#34;&gt;Book Summary: Thinking in Systems&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s say you want to build the perfect self-driving vehicle. This thing you want to make is composed of many parts. There&amp;rsquo;s the car itself made up of many subparts (engine, tires, transmission, etc) as well as the AI tech. Realistically you will need a bunch of speciallized embedded systems as well as a central computer to orchestrate everything. There&amp;rsquo;s sensors, actuators, orchestrators, etc.
@@ -153,7 +155,7 @@ In short, how does one person know if a design is good? How do you know how fast
       <title>The top 3 podcasts for Software Developers</title>
       <link>http://localhost:1313/posts/best-podcasts/</link>
       <pubDate>Tue, 31 Oct 2023 09:05:57 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/best-podcasts/</guid>
       <description>&lt;h3 id=&#34;the-top-3-podcasts-for-software-developers&#34;&gt;The Top 3 Podcasts for Software Developers&lt;/h3&gt;
 &lt;h4 id=&#34;go-time-by-changelog&#34;&gt;Go Time by Changelog&lt;/h4&gt;
@@ -165,7 +167,7 @@ In short, how does one person know if a design is good? How do you know how fast
       <title>Article Review: Lessons Learned from Twenty Years of Site Reliability Engineering</title>
       <link>http://localhost:1313/posts/twenty-years-of-sre-lessons-learned/</link>
       <pubDate>Tue, 31 Oct 2023 08:29:26 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/twenty-years-of-sre-lessons-learned/</guid>
       <description>&lt;h3 id=&#34;article-lessons-learned-from-twenty-years-of-site-reliability-engineering&#34;&gt;Article: Lessons Learned from Twenty Years of Site Reliability Engineering&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://sre.google/resources/practices-and-processes/twenty-years-of-sre-lessons-learned/&#34;&gt;Link to article&lt;/a&gt;&lt;/p&gt;
@@ -176,7 +178,7 @@ In short, how does one person know if a design is good? How do you know how fast
       <title>Staff Engineer Path</title>
       <link>http://localhost:1313/posts/staff-engineer-path/</link>
       <pubDate>Mon, 24 Jul 2023 09:05:00 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/staff-engineer-path/</guid>
       <description>&lt;h3 id=&#34;book-review-the-staff-engineers-path-by-tanya-reilly&#34;&gt;Book Review: The Staff Engineer&amp;rsquo;s Path by Tanya Reilly&lt;/h3&gt;
 &lt;p&gt;Tanya Reilly gives a guide for individual contributor software engineers who wish to grow their career but do not want to become managers. It gives insights about what a staff engineer does, and what you need to do to perform at that level. This is a technology-agnostic book. It gives the reader a high level view of the functional areas that matter.&lt;/p&gt;</description>
@@ -186,7 +188,7 @@ In short, how does one person know if a design is good? How do you know how fast
       <title>Coroutines for Go</title>
       <link>http://localhost:1313/posts/coroutines-for-go/</link>
       <pubDate>Tue, 18 Jul 2023 06:51:45 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/coroutines-for-go/</guid>
       <description>&lt;h3 id=&#34;go&#34;&gt;Go&lt;/h3&gt;
 &lt;p&gt;Russ Cox put out an &lt;a href=&#34;https://research.swtch.com/coro&#34;&gt;article&lt;/a&gt; yesteday about adding the abilities to run coroutines in go. Today I learned the difference
@@ -197,7 +199,7 @@ between a &lt;a href=&#34;https://go.dev/tour/concurrency/1&#34;&gt;goroutine&lt
       <title>Learning File Systems</title>
       <link>http://localhost:1313/posts/learning-file-systems/</link>
       <pubDate>Sat, 15 Jul 2023 21:21:31 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/learning-file-systems/</guid>
       <description>&lt;p&gt;Lately I have been learning about File Systems from the book &amp;ldquo;Operating Systems. Three Easy Pieces&amp;rdquo; by Remzi Arpaci-Dusseau.&lt;/p&gt;
 &lt;p&gt;I used to think that I knew how file systems worked because the interface open, read and write is so straight forward, what else could there be to it? But then at work some weird issues come up where some weird behaviour happens, like, du says the disk has space but df says the disk is full, what could make that happen? Or when an issue mounting a volume occurs and you realize that you don&amp;rsquo;t know the difference between mounting a block device versus mounting a file system. Are they both the same thing? I need to have a mental model of what the system is doing in order to debug it. Knowing the data structures in the file system and having an idea of what happens when you open a file, how does the operating system find the file? how does it traverse the file tree? What is in memory versus disk?
@@ -209,7 +211,7 @@ So anyway, that&amp;rsquo;s what I have been up to.&lt;/p&gt;</description>
       <title>My Tsundoku Pile</title>
       <link>http://localhost:1313/posts/my-tsundoku-pile/</link>
       <pubDate>Sun, 22 Jan 2023 20:02:32 -0800</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/my-tsundoku-pile/</guid>
       <description>&lt;figure&gt;
     &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/img/pile.jpg&#34;/&gt; 
@@ -224,7 +226,7 @@ Not going to lie, the Knuth books are intimidating. They are actually not that b
       <title>Paper every Day. Day ten: The Unix Timesharing System by Dennis Ritchie and Ken Thompson</title>
       <link>http://localhost:1313/posts/day-ten-unix-timesharing/</link>
       <pubDate>Sun, 31 Jul 2022 10:40:30 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/day-ten-unix-timesharing/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://dsf.berkeley.edu/cs262/unix.pdf&#34;&gt;Link to Paper&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This paper, published in July 1974 is remarkable because the design decisions that were made back then by these guys working at Bell Labs on an operating system for the &lt;a href=&#34;https://en.wikipedia.org/wiki/PDP-11&#34;&gt;PDP-11 &lt;/a&gt; are still relevant.&lt;/p&gt;
@@ -235,7 +237,7 @@ Not going to lie, the Knuth books are intimidating. They are actually not that b
       <title>Paper every day: Day Nine: An Analysis of Linux Scalability to Many Cores</title>
       <link>http://localhost:1313/posts/day-nine-linux-scalability/</link>
       <pubDate>Mon, 25 Jul 2022 09:13:41 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/day-nine-linux-scalability/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://pdos.csail.mit.edu/papers/linux:osdi10.pdf&#34;&gt;Link to Paper&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;From the abstract:&lt;/p&gt;
@@ -247,7 +249,7 @@ Not going to lie, the Knuth books are intimidating. They are actually not that b
       <title>Lets Go</title>
       <link>http://localhost:1313/posts/lets-go/</link>
       <pubDate>Sun, 24 Jul 2022 21:42:07 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/lets-go/</guid>
       <description>&lt;h3 id=&#34;go&#34;&gt;Go&lt;/h3&gt;
 &lt;p&gt;I have been writing go since a little after last year. I actually remember hearing about go when it first came out, back then I honestly never thought I&amp;rsquo;d be getting paid to work in it.&lt;/p&gt;
@@ -259,7 +261,7 @@ Expect posts on the following topics:&lt;/p&gt;</description>
       <title>Paper every day. Day Eight. Omega: flexible scalable scheduler for large compute clusters</title>
       <link>http://localhost:1313/posts/day-eight-omega/</link>
       <pubDate>Sun, 24 Jul 2022 21:30:27 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/day-eight-omega/</guid>
       <description>&lt;h3 id=&#34;omega&#34;&gt;Omega&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41684.pdf&#34;&gt;Link to paper&lt;/a&gt;&lt;/p&gt;
@@ -271,7 +273,7 @@ Expect posts on the following topics:&lt;/p&gt;</description>
       <title>Paper every day. Day Seven: Large-scale cluster management at Google with Borg</title>
       <link>http://localhost:1313/posts/day-seven-borg/</link>
       <pubDate>Sat, 23 Jul 2022 18:56:09 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/day-seven-borg/</guid>
       <description>&lt;h3 id=&#34;borg&#34;&gt;Borg&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://storage.googleapis.com/pub-tools-public-publication-data/pdf/43438.pdf&#34;&gt;Link to Paper&lt;/a&gt;&lt;/p&gt;
@@ -282,7 +284,7 @@ Expect posts on the following topics:&lt;/p&gt;</description>
       <title>Paper every day. Day Six: Hints for Computer Design</title>
       <link>http://localhost:1313/posts/day-six-hints-computer-design/</link>
       <pubDate>Fri, 22 Jul 2022 08:13:55 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/day-six-hints-computer-design/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/acrobat-17.pdf&#34;&gt;Link to Paper&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This paper was published originally in 1983 by the legendary folks from the Xerox Palo Alto Research Center.
@@ -294,7 +296,7 @@ The fact that the same rules apply now it&amp;rsquo;s remarkable. It turns out b
       <title>Paper every day. Day Five: On Designing and Deploying Internet Scale Services</title>
       <link>http://localhost:1313/posts/day-five-design-internet-scale/</link>
       <pubDate>Thu, 21 Jul 2022 07:07:19 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/day-five-design-internet-scale/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://s3.amazonaws.com/systemsandpapers/papers/hamilton.pdf&#34;&gt;Link to Paper&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This paper is a list of recommendations for running a large-scale system that aims to keep quality high and costs low. The author comes from the Windows Live Services Platform but this might as well be read as an Amazon internal guide since I didn&amp;rsquo;t see a thing in this list that we don&amp;rsquo;t do (or aim to do) in AWS. EDIT: Of course all these things sound familiar! The author is &lt;a href=&#34;https://perspectives.mvdirona.com/&#34;&gt;James Hamilton!&lt;/a&gt; He&amp;rsquo;s a VP and distinguished engineer here at AWS, I know him from leading the weekly AWS Ops Review meeting.&lt;/p&gt;</description>
@@ -304,7 +306,7 @@ The fact that the same rules apply now it&amp;rsquo;s remarkable. It turns out b
       <title>Paper every day. Day Four: Harvest, Yield, and Scalable Tolerant Systems</title>
       <link>http://localhost:1313/posts/day-four-harvest-yield/</link>
       <pubDate>Wed, 20 Jul 2022 06:28:24 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/day-four-harvest-yield/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://s3.amazonaws.com/systemsandpapers/papers/FOX_Brewer_99-Harvest_Yield_and_Scalable_Tolerant_Systems.pdf&#34;&gt;Link to paper&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Today&amp;rsquo;s paper comes thanks to &lt;a href=&#34;https://lethain.com/&#34;&gt;Will Larson&lt;/a&gt; this is a recommended paper in his book &lt;a href=&#34;https://www.amazon.com/dp/B07QYCHJ7V/&#34;&gt;Elegant Puzzle&lt;/a&gt;&lt;/p&gt;
@@ -327,7 +329,7 @@ The fact that the same rules apply now it&amp;rsquo;s remarkable. It turns out b
       <title>Paper every day. Day Three: Container Design Patterns</title>
       <link>http://localhost:1313/posts/day-three-container-design-patterns/</link>
       <pubDate>Tue, 19 Jul 2022 07:23:34 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/day-three-container-design-patterns/</guid>
       <description>&lt;h3 id=&#34;day-three-design-patterns-for-container-based-distributed-systems&#34;&gt;Day three: Design patterns for container-based distributed systems&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45406.pdf&#34;&gt;Link to paper&lt;/a&gt;&lt;/p&gt;
@@ -339,7 +341,7 @@ The fact that the same rules apply now it&amp;rsquo;s remarkable. It turns out b
       <title>Paper every day. Day Two: Kubernetes</title>
       <link>http://localhost:1313/posts/day-two-k8s/</link>
       <pubDate>Mon, 18 Jul 2022 06:33:49 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/day-two-k8s/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Welcome to day 2 of my paper-every-day journey. Today we&amp;rsquo;re going to cover &lt;a href=&#34;https://storage.googleapis.com/pub-tools-public-publication-data/pdf/44843.pdf&#34;&gt;Borg, Omega and Kubernetes&lt;/a&gt; This paper goes over how Kubernetes, the de-facto, open-source orchestrator of containers was developed using the lessons learned from building Borg and Omega, Google&amp;rsquo;s internal job orchestrator.&lt;/p&gt;
@@ -351,7 +353,7 @@ The Borg and Omega papers are excellent papers on their own right, but this expl
       <title>Goal: A Paper Every Day. Day One: Mesos Paper</title>
       <link>http://localhost:1313/posts/day-one-paper/</link>
       <pubDate>Sun, 17 Jul 2022 13:04:01 -0700</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/day-one-paper/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve decided to read a research paper each day. I am doing this in order to get better at my craft.
 I want to be better at designing software and it has been shown in research that the people who are really good at what they do
@@ -363,7 +365,7 @@ intend to improve my knowledge one day at time. You are welcome to follow along.
       <title>New blog!</title>
       <link>http://localhost:1313/posts/sample/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+      <author>you@example.com (Jose Villalta)</author>
       <guid>http://localhost:1313/posts/sample/</guid>
       <description>&lt;p&gt;Started a new page to write about tech stuff. Work in Progress&lt;/p&gt;</description>
     </item>
