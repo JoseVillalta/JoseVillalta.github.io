@@ -1,27 +1,27 @@
 baseURL: https://JoseVillalta.github.io
 languageCode: en-us
 title: "Yes Way Jose"
-author:
-  name: "Jose Villalta"
-  email: "you@example.com"
 theme: "PaperMod"
 
+ignoreLogs: ["warning-goldmark-raw-html"]
+
 params:
-     homeInfoParams:
-        Title: "Hi folks! I'm Jose. Welcome to my page"
-        Content: >
-             Infrastructure engineer at AWS building container orchestration at scale. Marine Corps veteran and immigrant who learned to build resilient systems by thriving through adversity.     
-             
-             
-     socialIcons:
-           - name: twitter
-             url: "https://twitter.com/PhilosoGeekDad"
-           - name: linkedin
-             url: "https://www.linkedin.com/in/jvillalta/"
-           - name: github
-             url: "https://github.com/JoseVillalta"
-           - name: goodreads
-             url: "https://www.goodreads.com/user/show/5926316-jose"
+  author:
+    name: "Jose Villalta"
+    email: "you@example.com"
+  homeInfoParams:
+    Title: "Hi folks! I'm Jose. Welcome to my page"
+    Content: >
+      Infrastructure engineer at AWS building container orchestration at scale. Marine Corps veteran and immigrant who learned to build resilient systems by thriving through adversity.     
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/PhilosoGeekDad"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/jvillalta/"
+    - name: github
+      url: "https://github.com/JoseVillalta"
+    - name: goodreads
+      url: "https://www.goodreads.com/user/show/5926316-jose"
 
 
 menu: 
