@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Categories on Yes Way Jose</title><link>https://JoseVillalta.github.io/categories/</link><description>Recent content in Categories on Yes Way Jose</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>you@example.com (Jose Villalta)</managingEditor><webMaster>you@example.com (Jose Villalta)</webMaster><lastBuildDate>Sun, 12 Oct 2025 17:12:00 -0700</lastBuildDate><atom:link href="https://JoseVillalta.github.io/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Technical</title><link>https://JoseVillalta.github.io/categories/technical/</link><pubDate>Sun, 12 Oct 2025 17:12:00 -0700</pubDate><author>you@example.com (Jose Villalta)</author><guid>https://JoseVillalta.github.io/categories/technical/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Yes Way Jose</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on Yes Way Jose</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>you@example.com (Jose Villalta)</managingEditor>
+    <webMaster>you@example.com (Jose Villalta)</webMaster>
+    <lastBuildDate>Sun, 12 Oct 2025 17:12:00 -0700</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Technical</title>
+      <link>http://localhost:1313/categories/technical/</link>
+      <pubDate>Sun, 12 Oct 2025 17:12:00 -0700</pubDate>
+      <author>you@example.com (Jose Villalta)</author>
+      <guid>http://localhost:1313/categories/technical/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
