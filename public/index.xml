@@ -8,7 +8,18 @@
     <language>en-us</language>
     <managingEditor>you@example.com (Jose Villalta)</managingEditor>
     <webMaster>you@example.com (Jose Villalta)</webMaster>
-    <lastBuildDate>Wed, 01 Apr 2026 08:56:25 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Apr 2026 05:03:53 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emotional Math</title>
+      <link>http://localhost:1313/posts/emotional-math/</link>
+      <pubDate>Thu, 02 Apr 2026 05:03:53 -0700</pubDate>
+      <author>you@example.com (Jose Villalta)</author>
+      <guid>http://localhost:1313/posts/emotional-math/</guid>
+      <description>&lt;p&gt;I recently finished reading &lt;a href=&#34;https://www.amazon.com/Thanks-Feedback-Science-Receiving-Well/dp/0670014664&#34;&gt;Thanks for the feedback&lt;/a&gt; by Douglas Stone and Sheila Heen and I can&amp;rsquo;t recommend it enough, especially now that it&amp;rsquo;s performance review season at many companies.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve taken many lessons from this book, but I want to focus on something that was super insightful when trying to understand people&amp;rsquo;s interactions.&lt;/p&gt;
+&lt;p&gt;All of us have blind spots. Things that we don&amp;rsquo;t see and don&amp;rsquo;t realize that we don&amp;rsquo;t see them. One of the causes is that we judge ourselves differently than other people judge us.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Announcing a Small Update per Day</title>
       <link>http://localhost:1313/posts/announcing-a-small-update-per-day/</link>

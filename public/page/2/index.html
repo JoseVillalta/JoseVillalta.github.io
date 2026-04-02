@@ -123,6 +123,20 @@
 <main class="main"> 
 
 <article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Understanding Container Port Mapping
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>The Problem Containers Solve Docker emerged as a lightweight alternative to virtual machines. VMs consumed significant resources and took 3-5 minutes to boot, making horizontal scaling expensive. Containers package applications with dependencies into images that start in seconds, not minutes.
+The Networking Challenge Without network connectivity, containers offer limited utility. Running a single container on host networking mode works fine - the process accesses the host machine’s network resources directly. But what happens when you need:
+...</p>
+  </section>
+  <footer class="entry-footer">&lt;span title=&#39;2024-12-19 11:00:00 -0800 PST&#39;&gt;December 19, 2024&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>
+  <a class="entry-link" aria-label="post link to Understanding Container Port Mapping" href="http://localhost:1313/posts/understanding-container-port-mapping/"></a>
+</article>
+
+<article class="post-entry"> 
 <figure class="entry-cover"><img loading="lazy" src="http://localhost:1313/img/Go-Gopher.jpg" alt="">
 </figure>
   <header class="entry-header">
@@ -250,21 +264,6 @@ The other books are less intimidating, more doable, I’m pretty sure al but one
   <footer class="entry-footer">&lt;span title=&#39;2023-01-22 20:02:32 -0800 PST&#39;&gt;January 22, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>
   <a class="entry-link" aria-label="post link to My Tsundoku Pile" href="http://localhost:1313/posts/my-tsundoku-pile/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Paper every Day. Day ten: The Unix Timesharing System by Dennis Ritchie and Ken Thompson
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Link to Paper
-This paper, published in July 1974 is remarkable because the design decisions that were made back then by these guys working at Bell Labs on an operating system for the PDP-11 are still relevant.
-I am still struggling to create a mental model of the unix file system, the fact that it looks like a single tree with the root at the top while simultaneously you can have multiple devices mounted dates back to these guys at Bell Labs.
-...</p>
-  </section>
-  <footer class="entry-footer">&lt;span title=&#39;2022-07-31 10:40:30 -0700 PDT&#39;&gt;July 31, 2022&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>
-  <a class="entry-link" aria-label="post link to Paper every Day. Day ten: The Unix Timesharing System by Dennis Ritchie and Ken Thompson" href="http://localhost:1313/posts/day-ten-unix-timesharing/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="http://localhost:1313/">« Prev Page</a>
@@ -286,6 +285,7 @@ I am still struggling to create a mental model of the unix file system, the fact
         <path d="M12 6H0l6-6z" />
     </svg>
 </a>
+
 
 <script>
     let menu = document.getElementById('menu')
