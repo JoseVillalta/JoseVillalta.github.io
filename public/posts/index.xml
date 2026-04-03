@@ -8,7 +8,21 @@
     <language>en-us</language>
     <managingEditor>you@example.com (Jose Villalta)</managingEditor>
     <webMaster>you@example.com (Jose Villalta)</webMaster>
-    <lastBuildDate>Thu, 02 Apr 2026 05:03:53 -0700</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Apr 2026 11:10:27 -0700</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Make Good Decisions</title>
+      <link>http://localhost:1313/posts/how-to-make-good-decisions/</link>
+      <pubDate>Fri, 03 Apr 2026 11:10:27 -0700</pubDate>
+      <author>you@example.com (Jose Villalta)</author>
+      <guid>http://localhost:1313/posts/how-to-make-good-decisions/</guid>
+      <description>&lt;p&gt;&amp;ldquo;It&amp;rsquo;s tough to make predictions, especially about the future&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;ndash;Yogi Berra&lt;/p&gt;
+&lt;p&gt;Making decisions is a life skill, no doubt about that. Making decisions when you have limited info is common and it&amp;rsquo;s what eventually separates good leaders from the rest.&lt;/p&gt;
+&lt;p&gt;On today&amp;rsquo;s episode of &amp;ldquo;One small thing per day&amp;rdquo; I want to mention a gem I learned reading &amp;ldquo;&lt;a href=&#34;https://www.amazon.com/Thinking-Bets-Making-Smarter-Decisions/dp/0735216355&#34;&gt;Thinking in Bets&lt;/a&gt;&amp;rdquo; by Annie Duke.&lt;/p&gt;
+&lt;h3 id=&#34;separate-decision-from-outcome&#34;&gt;Separate Decision from Outcome&lt;/h3&gt;
+&lt;p&gt;Do not use the result as a perfect signal of decision quality, especially when the sample size is small. A bad result can come from a good decision. For example Pete Carroll&amp;rsquo;s decision to pass and not rush in &lt;a href=&#34;https://www.theguardian.com/sport/2015/feb/02/how-bad-was-the-seahawks-play-call-at-the-end-of-super-bowl-xlix&#34;&gt;Super Bowl XLIX&lt;/a&gt; had a bad outcome but the decision making rationale was sound.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Emotional Math</title>
       <link>http://localhost:1313/posts/emotional-math/</link>
