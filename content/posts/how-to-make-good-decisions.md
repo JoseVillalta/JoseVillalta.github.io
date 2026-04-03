@@ -1,7 +1,7 @@
 ---
 title: "How to Make Good Decisions"
 date: 2026-04-03T11:10:27-07:00
-draft: true
+draft: false
 cover: 
    image: "img/baseball.jpg"
    relative: false
