@@ -23,15 +23,15 @@ Worse yet, bad decisions that result in good outcomes reinforce things that don'
 
 The Cargo Cult is an extreme one, there are many examples of bad decisions we make day to day. The main idea is that you focus on the process and let the result be just one of many signals. 
 
-How to do it? Well, I can tell you what I do. 
+How to do it? Well, I can tell you what I do:
 
-I seek truth, not validation. 
+### I seek truth, not validation. 
 Whenever I have uncertainty I ask myself, if I were wrong, how would I know? 
 
-Use "Pre-Mortems"
+### Use "Pre-Mortems"
 Imagine a failed decision and work backwards from that. 
 
-Embrace Uncertainty and Ambiguity
+### Embrace Uncertainty and Ambiguity
 Accept that all decisions are bets and be comfortable with probabilistic thinking. 
 
 I hope you found this useful. 
