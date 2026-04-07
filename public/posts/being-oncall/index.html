@@ -5,12 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Posts | Yes Way Jose</title>
+<title>Being Oncall | Yes Way Jose</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Yes Way Jose">
+<meta name="description" content="Being Oncall
+I&rsquo;m primary oncall for my AWS Service this week, so I might not have enough time to write every day, but as promised here&rsquo;s a quick thing, what&rsquo;s oncall like? I&rsquo;m not going to give you stories today, but I can tell you what concepts go through my head during oncall week.
+Monitoring Distributed Systems.
+Logs, metrics, alarms, how to read them, troubleshoot issues, respond to alarms.
+Ticket Response
+How to address customer tickets, making sure they have a good experience but have a bias toward self-service, otherwise the system doesn&rsquo;t scale.">
 <meta name="author" content="map[email:you@example.com name:Jose Villalta]">
-<link rel="canonical" href="http://localhost:1313/posts/">
+<link rel="canonical" href="http://localhost:1313/posts/being-oncall/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.48a18943c2fc15c38a372b8dde1f5e5dc0bc64fa6cb90f5a817d2f8c76b7f3ae.css" integrity="sha256-SKGJQ8L8FcOKNyuN3h9eXcC8ZPpsuQ9agX0vjHa3864=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2eadbb982468c11a433a3e291f01326f2ba43f065e256bf792dbd79640a92316.js" integrity="sha256-Lq27mCRowRpDOj4pHwEybyukPwZeJWv3ktvXlkCpIxY="
+    onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -18,8 +25,7 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/being-oncall/">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,7 +65,7 @@
 </noscript>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -119,91 +125,42 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>Posts</h1>
-</header>
+<main class="main">
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Paper every day. Day Four: Harvest, Yield, and Scalable Tolerant Systems
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Link to paper
-Today’s paper comes thanks to Will Larson this is a recommended paper in his book Elegant Puzzle
-This paper builds on the concepts from the the CAP Theorem which essentially says that when it comes to distributed systems you can only have 2 out of these 3 qualities:
-Consistency
-Avalaibility
-Partition Tolerance
-Then it introduces two concepts harvest and yield which is interesting because it’s not something you usually hear in distributed systems (this is a paper from the ’90s) and yet I think it’s import to know and to think in these terms.
-...</p>
-  </section>
-  <footer class="entry-footer">&lt;span title=&#39;2022-07-20 06:28:24 -0700 PDT&#39;&gt;July 20, 2022&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>
-  <a class="entry-link" aria-label="post link to Paper every day. Day Four: Harvest, Yield, and Scalable Tolerant Systems" href="http://localhost:1313/posts/day-four-harvest-yield/"></a>
-</article>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Being Oncall
+    </h1>
+    <div class="post-meta">&lt;span title=&#39;2026-04-07 06:54:07 -0700 PDT&#39;&gt;April 7, 2026&lt;/span&gt;&amp;nbsp;·&amp;nbsp;map[email:you@example.com name:Jose Villalta]
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Paper every day. Day Three: Container Design Patterns
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Day three: Design patterns for container-based distributed systems Link to paper
-Containers provide the ability to package, deploy and reuse applications using a natural isolation boundary. Developers can expose application-specific functionality as interfaces as well as more generic hooks for many systems like metrics, health, etc.
-In this paper the authors present the readers with two types of container design patterns: Patterns for container in the same machine (Single node) and patterns where the containers are spread out in different machines (multi node)
-...</p>
-  </section>
-  <footer class="entry-footer">&lt;span title=&#39;2022-07-19 07:23:34 -0700 PDT&#39;&gt;July 19, 2022&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>
-  <a class="entry-link" aria-label="post link to Paper every day. Day Three: Container Design Patterns" href="http://localhost:1313/posts/day-three-container-design-patterns/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Paper every day. Day Two: Kubernetes
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p> Welcome to day 2 of my paper-every-day journey. Today we’re going to cover Borg, Omega and Kubernetes This paper goes over how Kubernetes, the de-facto, open-source orchestrator of containers was developed using the lessons learned from building Borg and Omega, Google’s internal job orchestrator.
-Kubernetes is a container orchestration system that aims to make developing and deploying complex distributed systems easier. The Borg and Omega papers are excellent papers on their own right, but this explanation original published in ACM Queue is very insightful. These are the lessons I gathered:
-...</p>
-  </section>
-  <footer class="entry-footer">&lt;span title=&#39;2022-07-18 06:33:49 -0700 PDT&#39;&gt;July 18, 2022&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>
-  <a class="entry-link" aria-label="post link to Paper every day. Day Two: Kubernetes" href="http://localhost:1313/posts/day-two-k8s/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Goal: A Paper Every Day. Day One: Mesos Paper
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>I’ve decided to read a research paper each day. I am doing this in order to get better at my craft. I want to be better at designing software and it has been shown in research that the people who are really good at what they do are those that do “delibarate practice” I am most definitely NOT the best software system designer out there, but talent is overated and I intend to improve my knowledge one day at time. You are welcome to follow along.
-...</p>
-  </section>
-  <footer class="entry-footer">&lt;span title=&#39;2022-07-17 13:04:01 -0700 PDT&#39;&gt;July 17, 2022&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>
-  <a class="entry-link" aria-label="post link to Goal: A Paper Every Day. Day One: Mesos Paper" href="http://localhost:1313/posts/day-one-paper/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover"><img loading="lazy" src="http://localhost:1313/img/cover.jpeg" alt="">
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="lazy" src="http://localhost:1313/img/this-is-fine.jpg" alt="">
+        
 </figure>
-  <header class="entry-header">
-    <h2>New blog!
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Started a new page to write about tech stuff. Work in Progress
-</p>
-  </section>
-  <footer class="entry-footer">Jose Villalta</footer>
-  <a class="entry-link" aria-label="post link to New blog!" href="http://localhost:1313/posts/sample/"></a>
+  <div class="post-content"><h1 id="being-oncall">Being Oncall<a hidden class="anchor" aria-hidden="true" href="#being-oncall">#</a></h1>
+<p>I&rsquo;m primary oncall for my AWS Service this week, so I might not have enough time to write every day, but as promised here&rsquo;s a quick thing, what&rsquo;s oncall like? I&rsquo;m not going to give you stories today, but I can tell you what concepts go through my head during oncall week.</p>
+<h4 id="monitoring-distributed-systems">Monitoring Distributed Systems.<a hidden class="anchor" aria-hidden="true" href="#monitoring-distributed-systems">#</a></h4>
+<p>Logs, metrics, alarms, how to read them, troubleshoot issues, respond to alarms.</p>
+<h4 id="ticket-response">Ticket Response<a hidden class="anchor" aria-hidden="true" href="#ticket-response">#</a></h4>
+<p>How to address customer tickets, making sure they have a good experience but have a bias toward self-service, otherwise the system doesn&rsquo;t scale.</p>
+<h4 id="automate-manual-work">Automate Manual Work<a hidden class="anchor" aria-hidden="true" href="#automate-manual-work">#</a></h4>
+<p>No toil, if a machine can do it, make it do it. Automate carefully, deliberately and always monitor and have a way to roll back in case there are problems.</p>
+<h4 id="improve-optimize-make-it-better">Improve, Optimize, Make it Better<a hidden class="anchor" aria-hidden="true" href="#improve-optimize-make-it-better">#</a></h4>
+<p>Improve the customer experience, Improve the System, Improve the process. Always look for inefficiencies to optimize away.</p>
+<h4 id="look-ahead">Look Ahead<a hidden class="anchor" aria-hidden="true" href="#look-ahead">#</a></h4>
+<p>Think long term, think big. Be proactive.</p>
+<p>I know that these are just abstract concepts without any examples, but, it is what it is.</p>
+<p><em>PS</em>: I highly recommend checking out the <a href="https://sre.google/books/">Google SRE Books</a>. They are free and provide helpful, actionable guidance.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+  </footer>
 </article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="prev" href="http://localhost:1313/posts/page/3/">« Prev Page</a>
-  </nav>
-</footer>
     </main>
     
 <footer class="footer">

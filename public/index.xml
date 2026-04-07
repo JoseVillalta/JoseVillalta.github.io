@@ -8,7 +8,31 @@
     <language>en-us</language>
     <managingEditor>you@example.com (Jose Villalta)</managingEditor>
     <webMaster>you@example.com (Jose Villalta)</webMaster>
-    <lastBuildDate>Fri, 03 Apr 2026 11:10:27 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Apr 2026 06:54:07 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Being Oncall</title>
+      <link>http://localhost:1313/posts/being-oncall/</link>
+      <pubDate>Tue, 07 Apr 2026 06:54:07 -0700</pubDate>
+      <author>you@example.com (Jose Villalta)</author>
+      <guid>http://localhost:1313/posts/being-oncall/</guid>
+      <description>&lt;h1 id=&#34;being-oncall&#34;&gt;Being Oncall&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m primary oncall for my AWS Service this week, so I might not have enough time to write every day, but as promised here&amp;rsquo;s a quick thing, what&amp;rsquo;s oncall like? I&amp;rsquo;m not going to give you stories today, but I can tell you what concepts go through my head during oncall week.&lt;/p&gt;
+&lt;h4 id=&#34;monitoring-distributed-systems&#34;&gt;Monitoring Distributed Systems.&lt;/h4&gt;
+&lt;p&gt;Logs, metrics, alarms, how to read them, troubleshoot issues, respond to alarms.&lt;/p&gt;
+&lt;h4 id=&#34;ticket-response&#34;&gt;Ticket Response&lt;/h4&gt;
+&lt;p&gt;How to address customer tickets, making sure they have a good experience but have a bias toward self-service, otherwise the system doesn&amp;rsquo;t scale.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Working Backwards</title>
+      <link>http://localhost:1313/posts/working-backwards/</link>
+      <pubDate>Mon, 06 Apr 2026 08:00:41 -0700</pubDate>
+      <author>you@example.com (Jose Villalta)</author>
+      <guid>http://localhost:1313/posts/working-backwards/</guid>
+      <description>&lt;p&gt;There&amp;rsquo;s a mental model that comes up a lot in my day to day. When I&amp;rsquo;m solving a problem, I start by thinking about the result I want, and work backwards from there. The challenge is having the clarity to define the problem and taking care that I&amp;rsquo;m solving the right problem. This is why I start with the goal in mind.&lt;/p&gt;
+&lt;p&gt;I use the working backwards method when designing a feature. We start by writing a PRFAQ document, a document that specifies the public announcement of the feature with a section for frequently asked questions. When doing a small change or a simple bug fix, I also do the same thing, but instead of a PRFAQ doc I imagine sending an email to the team or a message on Slack saying what was fixed and what customers experience after the change.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>How to Make Good Decisions</title>
       <link>http://localhost:1313/posts/how-to-make-good-decisions/</link>
