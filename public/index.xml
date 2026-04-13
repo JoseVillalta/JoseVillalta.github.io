@@ -8,7 +8,16 @@
     <language>en-us</language>
     <managingEditor>you@example.com (Jose Villalta)</managingEditor>
     <webMaster>you@example.com (Jose Villalta)</webMaster>
-    <lastBuildDate>Fri, 10 Apr 2026 08:34:08 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Apr 2026 07:51:31 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Eisenhower Matrix</title>
+      <link>http://localhost:1313/posts/eisenhower-matrix/</link>
+      <pubDate>Mon, 13 Apr 2026 07:51:31 -0700</pubDate>
+      <author>you@example.com (Jose Villalta)</author>
+      <guid>http://localhost:1313/posts/eisenhower-matrix/</guid>
+      <description>&lt;p&gt;One big challenge that comes up a lot at work is that there are always more things to do than time and people to do them. There&amp;rsquo;s always tech debt that we want to pay off. Long-term migrations away from systems that are going to reach their end of life, that weird bug that nobody knows for sure what&amp;rsquo;s causing it, the big project announced publicly that has a lot of visibility. Meetings to attend, Slack messages, emails to reply to, conferences, patents, books to write. You get the picture.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Humble Book Bundle</title>
       <link>http://localhost:1313/posts/humble-book-bundle/</link>
