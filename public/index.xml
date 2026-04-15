@@ -8,7 +8,17 @@
     <language>en-us</language>
     <managingEditor>you@example.com (Jose Villalta)</managingEditor>
     <webMaster>you@example.com (Jose Villalta)</webMaster>
-    <lastBuildDate>Mon, 13 Apr 2026 07:51:31 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Apr 2026 04:58:04 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Keep Track of Everything at Work</title>
+      <link>http://localhost:1313/posts/my-daily-ritual/</link>
+      <pubDate>Wed, 15 Apr 2026 04:58:04 -0700</pubDate>
+      <author>you@example.com (Jose Villalta)</author>
+      <guid>http://localhost:1313/posts/my-daily-ritual/</guid>
+      <description>&lt;p&gt;One of the things I learned at Amazon is how to manage a workload significantly larger than any other place I&amp;rsquo;ve ever worked at. I understand the reason for it: at Amazon the team that creates the service owns it. That means they are the operators and responders as well as designers and testers.&lt;/p&gt;
+&lt;p&gt;As a result, senior engineers often have more than one project going on at any given time. So how do you keep track of it all? Well, I have a system of &amp;ldquo;rituals&amp;rdquo; or routines that I use. It&amp;rsquo;s very simple and I&amp;rsquo;ve taken inspiration from the &amp;ldquo;Getting Things Done&amp;rdquo; GTD method, as well as other time management books I&amp;rsquo;ve read.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Eisenhower Matrix</title>
       <link>http://localhost:1313/posts/eisenhower-matrix/</link>
