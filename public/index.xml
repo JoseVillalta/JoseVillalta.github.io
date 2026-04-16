@@ -8,7 +8,17 @@
     <language>en-us</language>
     <managingEditor>you@example.com (Jose Villalta)</managingEditor>
     <webMaster>you@example.com (Jose Villalta)</webMaster>
-    <lastBuildDate>Wed, 15 Apr 2026 04:58:04 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Apr 2026 07:09:40 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Make Hard Decisions Easy</title>
+      <link>http://localhost:1313/posts/minimize-regret/</link>
+      <pubDate>Thu, 16 Apr 2026 07:09:40 -0700</pubDate>
+      <author>you@example.com (Jose Villalta)</author>
+      <guid>http://localhost:1313/posts/minimize-regret/</guid>
+      <description>&lt;p&gt;One useful tool I use when I want to make a hard decision easy: I picture myself at 80 years old and ask, will I regret not doing this? If the answer is yes, I have to try it. If the answer is no, I can let it go and move on without losing sleep over it.&lt;/p&gt;
+&lt;p&gt;I learned about this reading &lt;a href=&#34;https://www.amazon.com/Everything-Store-Jeff-Bezos-Amazon/dp/0316219266&#34;&gt;The Everything Store&lt;/a&gt; by Brad Stone. The idea is called the Regret Minimization Framework. When Jeff Bezos was deciding whether to leave his job and start Amazon, he used this exact exercise. He imagined himself at 80 and realized he would regret not trying, even if it failed. The potential regret of not trying was worse than the potential regret of trying and failing.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>How I Keep Track of Everything at Work</title>
       <link>http://localhost:1313/posts/my-daily-ritual/</link>

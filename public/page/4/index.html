@@ -124,6 +124,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Paper every day. Day Eight. Omega: flexible scalable scheduler for large compute clusters
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Omega Link to paper
+Omega was the second cluster manager system built by Google. It is Borg’s sucessor and it was designed as a happy medium between Borg’s centralized scheduler architecture and Mesos’s two-level approach where the placement is delegated to the running framework. Omega shares the state of the cluster among leaders and uses optimistic concurrency control (detect when different cluster schedulers are competing for the same resource)
+The premise of the whole paper is that a centralized scheduler does not scale well, so there must be a better way to handle scheduling different types of workloads in a fast and conrrect manner. The two main types of workloads, services and batches have different requriements and present their unique challenges. The paper explains the type of simulations the engineer at Google used to determine that conflicts among different scheduler is not that common and that Omega manages to fit more tasks in the clusters than Mesos.
+...</p>
+  </section>
+  <footer class="entry-footer">&lt;span title=&#39;2022-07-24 21:30:27 -0700 PDT&#39;&gt;July 24, 2022&lt;/span&gt;&amp;nbsp;·&amp;nbsp;Jose Villalta</footer>
+  <a class="entry-link" aria-label="post link to Paper every day. Day Eight. Omega: flexible scalable scheduler for large compute clusters" href="http://localhost:1313/posts/day-eight-omega/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Paper every day. Day Seven: Large-scale cluster management at Google with Borg
     </h2>
   </header>
