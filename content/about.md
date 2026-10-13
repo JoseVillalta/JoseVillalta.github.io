@@ -21,7 +21,7 @@ My technical foundation: Bachelor's in Computer Engineering from Florida Atlanti
 
 Before I became an engineer, I was a sergeant in the United States Marine Corps Infantry, stationed at Camp Lejeune and deployed around the world. After the Marines, I joined the Florida Army National Guard as a reservist while working full time as a bank teller and going to college at night. I was deployed to Iraq in 2003-2004 with the 124th Infantry (Florida National Guard).
 
-I am American by choice - born in Venezuela, moved to Florida at 13, joined the Marines right after high school in 1998. I got married in 2002 to an amazing woman. My daughters were born in 2005 and 2007, and they transformed my life. I moved to Seattle in 2014. I have two bulldogs, Chicha and Petunia, who rule the house.
+I am American by choice - born in Venezuela, moved to Florida at 13, joined the Marines right after high school in 1998.  My daughters were born in 2005 and 2007, and they transformed my life. I moved to Seattle in 2014. I have an English bulldog named Petunia, who rules the house. I love philosophy, science and math. 
 
 {{< figure src="/img/me_ireland2.jpg" >}}
 
